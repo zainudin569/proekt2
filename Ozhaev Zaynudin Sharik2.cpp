@@ -21,7 +21,7 @@ void MpveBall()
      int dt = 1;
 
      int x2  = 150, y2  = 110,
-         vx2 =   5, vy2 =   3,
+         vx2 =   3, vy2 =   4,
          r2 = 30;
 
      int dt2 = 1;
