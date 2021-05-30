@@ -4,6 +4,9 @@
 void MoveBall();
 void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillColor);
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
+void ControlBall(int x, int y, int* vx, int* vy);
+
+//---------------------------------------------------------------------------------
 
 int main()
     {
@@ -13,6 +16,8 @@ int main()
 
     return 0;
     }
+
+//---------------------------------------------------------------------------------
 
 void MoveBall()
     {
@@ -41,12 +46,34 @@ void MoveBall()
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
 
-        if (txGetAsyncKeyState (VK_RIGHT)) vx1++;
-        if (txGetAsyncKeyState (VK_LEFT))  vx1--;
-        if (txGetAsyncKeyState (VK_UP))    vy1--;
-        if (txGetAsyncKeyState (VK_DOWN))  vy1++;
+        ControlBall(x, y, &vx, &vy);;
 
-        if (txGetAsyncKeyState (VK_SPACE)) vy1 = vx1 = 0;
+        txSleep (1);
+        }
+    }
+
+//---------------------------------------------------------------------------------
+
+void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF FillColor)
+    {
+    txSetColor (Color, 2);
+    txSetFillColor (FillColor);
+
+    txCircle (x, y, r);
+    txLine (x, y, x + vx*5, y + vy*5);
+    txCircle (x + vx*5, y + vy*5, 3);
+    }
+
+//---------------------------------------------------------------------------------
+
+void ControlBall(int x, int y, int* vx, int* vy)
+        {
+        if (txGetAsyncKeyState (VK_RIGHT)) *vx++;
+        if (txGetAsyncKeyState (VK_LEFT))  *vx--;
+        if (txGetAsyncKeyState (VK_UP))    *vy--;
+        if (txGetAsyncKeyState (VK_DOWN))  *vy++;
+
+        if (txGetAsyncKeyState (VK_SPACE)) *vy = *vx = 0;
 
         if (txGetAsyncKeyState (VK_F1))
             {
@@ -65,22 +92,12 @@ void MoveBall()
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            txSetColor     (RGB(x1,   y1,   150), 2);
-            txSetFillColor (RGB(x1/2, y1/2, 150));
+            txSetColor     (RGB(x,   y,   150), 2);
+            txSetFillColor (RGB(x/2, y/2, 150));
             }
-        txSleep (1);
         }
-    }
 
-void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF FillColor)
-    {
-    txSetColor (Color, 2);
-    txSetFillColor (FillColor);
-
-    txCircle (x, y, r);
-    txLine (x, y, x + vx*5, y + vy*5);
-    txCircle (x + vx*5, y + vy*5, 3);
-    }
+//---------------------------------------------------------------------------------
 
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
     {
@@ -89,25 +106,25 @@ void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
 
     if (*x > 800 - r)
         {
-         *vx = -*vx;
-         *x = 800 - r;
+         *vx = - *vx;
+          *x = 800 - r;
         }
 
     if (*y > 600 - r)
         {
-         *vy = -*vy;
-         *y = 600 - r;
+         *vy = - *vy;
+          *y = 600 - r;
         }
 
     if (*x < 0 + r)
         {
-         *vx = -*vx;
-         *x = 0 + r;
+         *vx = - *vx;
+          *x = 0 + r;
         }
 
     if (*y < 0 + r)
         {
-         *vy = -*vy;
-         *y = 0 + r;
+         *vy = - *vy;
+          *y = 0 + r;
         }
     }
