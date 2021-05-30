@@ -45,7 +45,7 @@ void MoveBall()
         DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTBLUE , TX_BLUE );
         DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
         DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
-        DrowBall(x4, y4, vx4, vy4, r4, TX_LIGHTBROWN, TX_BROWN);
+        DrowBall(x4, y4, vx4, vy4, r4, TX_TX_PINK   , TX_BROWN);
 
         PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
