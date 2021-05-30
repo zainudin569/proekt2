@@ -84,8 +84,8 @@ void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF Fill
 
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
     {
-    *x += vx * dt;
-    *y += vy * dt;
+    *x += *vx * dt;
+    *y += *vy * dt;
 
     if (*x > 800 - r)
         {
