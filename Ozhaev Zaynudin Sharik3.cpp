@@ -21,30 +21,40 @@ int main()
 
 void MoveBall()
     {
-     int x1 = 100,  y1 = 100,
-        vx1 =   2, vy1 =   3,
-         r1 =  10;
+    int x1 = 100,  y1 = 100,
+       vx1 =   2, vy1 =   3,
+        r1 =  10;
 
-     int x2 = 150,  y2 = 110,
-        vx2 =   7, vy2 =   2,
-         r2 =  25;
+    int x2 = 150,  y2 = 110,
+       vx2 =   7, vy2 =   2,
+        r2 =  25;
 
-     int x3 = 100,  y3 = 150,
-        vx3 =   5, vy3 =   3,
-         r3 =  15;
+    int x3 = 100,  y3 = 150,
+    vx3 =   5, vy3 =   3,
+     r3 =  15;
 
-     int dt = 1;
+    int x3 = 100,  y3 = 150,
+       vx3 =   5, vy3 =   3,
+        r3 =  15;
 
-     while (!txGetAsyncKeyState (VK_ESCAPE))
+    int x4 = 150,  y4 = 150,
+       vx4 =   3, vy4 =   6,
+        r4 =  20;
+
+    int dt = 1;
+
+    while (!txGetAsyncKeyState (VK_ESCAPE))
         {
 
-        DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTBLUE , TX_BLUE);
-        DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED);
+        DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTBLUE , TX_BLUE );
+        DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
         DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
+        DrowBall(x4, y4, vx4, vy4, r4, TX_LIGHTBROWN, TX_BROWN);
 
         PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
+        PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
 
         ControlBall(x1, y1, &vx1, &vy1);
 
