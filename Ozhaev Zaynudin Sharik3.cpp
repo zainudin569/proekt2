@@ -46,7 +46,7 @@ void MoveBall()
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
 
-        ControlBall(x1, y1, &vx, &vy);
+        ControlBall(x1, y1, &vx1, &vy1);
 
         txSleep (1);
         }
