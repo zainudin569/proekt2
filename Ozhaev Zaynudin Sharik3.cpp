@@ -68,10 +68,10 @@ void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF Fill
 
 void ControlBall(int x, int y, int* vx, int* vy)
         {
-        if (txGetAsyncKeyState (VK_RIGHT)) *vx++;
-        if (txGetAsyncKeyState (VK_LEFT))  *vx--;
-        if (txGetAsyncKeyState (VK_UP))    *vy--;
-        if (txGetAsyncKeyState (VK_DOWN))  *vy++;
+        if (txGetAsyncKeyState (VK_RIGHT)) *vx = *vx + 1;
+        if (txGetAsyncKeyState (VK_LEFT))  --*vx;
+        if (txGetAsyncKeyState (VK_UP))    --*vy;
+        if (txGetAsyncKeyState (VK_DOWN))  ++*vy;
 
         if (txGetAsyncKeyState (VK_SPACE)) *vy = *vx = 0;
 
