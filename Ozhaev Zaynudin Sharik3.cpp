@@ -17,14 +17,14 @@ int main()
 void MoveBall()
     {
      int x1 = 100,  y1 = 100,
-        vx1 =   5, vy1 =   3,
+        vx1 =   2, vy1 =   3,
          r1 =  20;
 
-     int x2 = 100,  y2 = 100,
-        vx2 =   5, vy2 =   3,
+     int x2 = 150,  y2 = 110,
+        vx2 =   7, vy2 =   2,
          r2 =  20;
 
-     int x3 = 100,  y3 = 100,
+     int x3 = 100,  y3 = 150,
         vx3 =   5, vy3 =   3,
          r3 =  20;
 
