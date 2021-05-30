@@ -41,12 +41,12 @@ void MoveBall()
         PhysicsBall(x2, y2, vx2, vy2, dt, r2);
         PhysicsBall(x3, y3, vx3, vy3, dt, r3);
 
-        if (txGetAsyncKeyState (VK_RIGHT)) vx++;
-        if (txGetAsyncKeyState (VK_LEFT))  vx--;
-        if (txGetAsyncKeyState (VK_UP))    vy--;
-        if (txGetAsyncKeyState (VK_DOWN))  vy++;
+        if (txGetAsyncKeyState (VK_RIGHT)) vx1++;
+        if (txGetAsyncKeyState (VK_LEFT))  vx1--;
+        if (txGetAsyncKeyState (VK_UP))    vy1--;
+        if (txGetAsyncKeyState (VK_DOWN))  vy1++;
 
-        if (txGetAsyncKeyState (VK_SPACE)) vy = vx = 0;
+        if (txGetAsyncKeyState (VK_SPACE)) vy1 = vx1 = 0;
 
         if (txGetAsyncKeyState (VK_F1))
             {
