@@ -3,7 +3,7 @@
 
 void MoveBall();
 void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillColor);
-void PhysicsBall(int* x, int y, int vx, int vy, int dt, int r);
+void PhysicsBall(int* x, int* y, int vx, int vy, int dt, int r);
 
 int main()
     {
@@ -82,10 +82,10 @@ void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF Fill
     txCircle (x + vx*5, y + vy*5, 3);
     }
 
-void PhysicsBall(int* x, int y, int vx, int vy, int dt, int r)
+void PhysicsBall(int* x, int* y, int vx, int vy, int dt, int r)
     {
     *x += vx * dt;
-    y += vy * dt;
+    *y += vy * dt;
 
     if (*x > 800 - r)
         {
@@ -93,10 +93,10 @@ void PhysicsBall(int* x, int y, int vx, int vy, int dt, int r)
          *x = 800 - r;
         }
 
-    if (y > 600 - r)
+    if (*y > 600 - r)
         {
          vy = -vy;
-         y = 600 - r;
+         *y = 600 - r;
         }
 
     if (*x < 0 + r)
@@ -105,9 +105,9 @@ void PhysicsBall(int* x, int y, int vx, int vy, int dt, int r)
          *x = 0 + r;
         }
 
-    if (y < 0 + r)
+    if (*y < 0 + r)
         {
          vy = -vy;
-         y = 0 + r;
+         *y = 0 + r;
         }
     }
