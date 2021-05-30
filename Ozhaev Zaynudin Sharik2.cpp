@@ -60,8 +60,8 @@ void MpveBall()
              y = 0 + r;
             }
     //________________________________________________________________
-        txSetColor (TX_LIGHTYELLOW, 2);
-        txSetFillColor (TX_YELLOW);
+        txSetColor (TX_LIGHTRED, 2);
+        txSetFillColor (TX_RED);
 
         txCircle (x2, y2, r2);
 
