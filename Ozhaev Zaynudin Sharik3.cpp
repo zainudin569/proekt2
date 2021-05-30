@@ -4,7 +4,7 @@
 void MoveBall();
 void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillColor);
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
-void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* FillColor);
+void ControlBall(int x, int y, int* vx, int* vy);
 
 //---------------------------------------------------------------------------------
 
