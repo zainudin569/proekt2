@@ -54,7 +54,7 @@ void MoveBall()
 
 //---------------------------------------------------------------------------------
 
-void DrowBall(int x, int y, int vx, int vy, int r, COLORREF* Color, COLORREF* FillColor)
+void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF FillColor)
     {
     txSetColor (Color, 2);
     txSetFillColor (FillColor);
@@ -66,7 +66,7 @@ void DrowBall(int x, int y, int vx, int vy, int r, COLORREF* Color, COLORREF* Fi
 
 //---------------------------------------------------------------------------------
 
-void ControlBall(int x, int y, int* vx, int* vy, COLORREF Color, COLORREF FillColor)
+void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* FillColor)
         {
         if (txGetAsyncKeyState (VK_RIGHT)) *vx = *vx + 1;
         if (txGetAsyncKeyState (VK_LEFT))  --*vx;
