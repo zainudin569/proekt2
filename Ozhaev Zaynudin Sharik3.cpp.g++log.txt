@@ -1,3 +1,20 @@
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:7:87: error: expected initializer before ')' token
+ void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* FillColor));
+                                                                                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void MoveBall()':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:42: error: 'Color' was not declared in this scope
+         ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
+                                          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:50: error: 'FillColor' was not declared in this scope
+         ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
+                                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:59: error: 'ControlBall' was not declared in this scope
+         ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
+                                                           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void ControlBall(int, int, int*, int*, COLORREF*, COLORREF*)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:69:6: warning: no previous declaration for 'void ControlBall(int, int, int*, int*, COLORREF*, COLORREF*)' [-Wmissing-declarations]
+ void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* FillColor)
+      ^
 ---------------------------------------------------------------------------------------------
-[31.05.2021  2:29:38,26 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[31.05.2021  2:33:55,94 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
