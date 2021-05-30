@@ -2,7 +2,8 @@
 #include "TXLib.h"
 
 void MoveBall();
-void DrowBall(int x, int y, int vx, int vy, COLORREF Color, COLORREF FillColor);
+void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillColor);
+void PhysicsBall(int x, int y, int vx, int vy, int dt, int r)
 
 int main()
     {
@@ -32,36 +33,13 @@ void MoveBall()
      while (!txGetAsyncKeyState (VK_ESCAPE))
         {
 
-        DrowBall(x1, y1, vx1, vy1, TX_LIGHTBLUE , TX_BLUE);
-        DrowBall(x2, y2, vx2, vy2, TX_LIGHTRED  , TX_RED);
-        DrowBall(x2, y2, vx2, vy2, TX_LIGHTGREEN, TX_GREEN);
+        DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTBLUE , TX_BLUE);
+        DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED);
+        DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
 
-        x += vx * dt;
-        y += vy * dt;
-
-        if (x > 800 - r)
-            {
-             vx = -vx;
-             x = 800 - r;
-            }
-
-        if (y > 600 - r)
-            {
-             vy = -vy;
-             y = 600 - r;
-            }
-
-        if (x < 0 + r)
-            {
-             vx = -vx;
-             x = 0 + r;
-            }
-
-        if (y < 0 + r)
-            {
-             vy = -vy;
-             y = 0 + r;
-            }
+        PhysicsBall(x1, y1, vx1, vy1, dt, r1);
+        PhysicsBall(x2, y2, vx2, vy2, dt, r2);
+        PhysicsBall(x3, y3, vx3, vy3, dt, r3);
 
         if (txGetAsyncKeyState (VK_RIGHT)) vx++;
         if (txGetAsyncKeyState (VK_LEFT))  vx--;
@@ -94,7 +72,7 @@ void MoveBall()
         }
     }
 
-void DrowBall(int x, int y, int vx, int vy, COLORREF Color, COLORREF FillColor)
+void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF FillColor)
     {
     txSetColor (Color, 2);
     txSetFillColor (FillColor);
@@ -102,4 +80,34 @@ void DrowBall(int x, int y, int vx, int vy, COLORREF Color, COLORREF FillColor)
     txCircle (x, y, r);
     txLine (x, y, x + vx*5, y + vy*5);
     txCircle (x + vx*5, y + vy*5, 3);
+    }
+
+void PhysicsBall(int x, int y, int vx, int vy, int dt, int r)
+    {
+    x += vx * dt;
+    y += vy * dt;
+
+    if (x > 800 - r)
+        {
+         vx = -vx;
+         x = 800 - r;
+        }
+
+    if (y > 600 - r)
+        {
+         vy = -vy;
+         y = 600 - r;
+        }
+
+    if (x < 0 + r)
+        {
+         vx = -vx;
+         x = 0 + r;
+        }
+
+    if (y < 0 + r)
+        {
+         vy = -vy;
+         y = 0 + r;
+        }
     }
