@@ -16,7 +16,7 @@ void MpveBall()
     {
      int x  = 100, y  = 100,
          vx =   5, vy =   3,
-         r = 30;
+         r = 20;
 
      int dt = 1;
 
