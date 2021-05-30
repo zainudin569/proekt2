@@ -1,7 +1,7 @@
 
 #include "TXLib.h"
 
-void MpveBall();
+void MoveBall();
 
 int main()
     {
@@ -12,7 +12,7 @@ int main()
     return 0;
     }
 
-void MpveBall()
+void MoveBall()
     {
      int x  = 100, y  = 100,
          vx =   5, vy =   3,
