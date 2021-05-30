@@ -7,7 +7,7 @@ int main()
     {
     txCreateWindow (800, 600);
 
-    MpveBall();
+    MoveBall();
 
     return 0;
     }
