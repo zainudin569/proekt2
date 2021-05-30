@@ -46,7 +46,7 @@ void MoveBall()
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
 
-        ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
+        ControlBall(x1, y1, &vx1, &vy1);
 
         txSleep (1);
         }
@@ -66,7 +66,7 @@ void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF Fill
 
 //---------------------------------------------------------------------------------
 
-void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* FillColor)
+void ControlBall(int x, int y, int* vx, int* vy)
         {
         if (txGetAsyncKeyState (VK_RIGHT)) *vx = *vx + 1;
         if (txGetAsyncKeyState (VK_LEFT))  --*vx;
@@ -77,8 +77,8 @@ void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* Fill
 
         if (txGetAsyncKeyState (VK_F1))
             {
-            *Color = (TX_LIGHTRED);
-            *FillColor = (TX_RED);
+            txSetColor = (TX_LIGHTRED, 2);
+            txSetFillColor = (TX_RED);
             }
         if (txGetAsyncKeyState (VK_F2))
             {

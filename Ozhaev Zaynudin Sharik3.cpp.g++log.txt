@@ -1,10 +1,25 @@
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:42: error: 'Color' was not declared in this scope
-         ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
-                                          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:50: error: 'FillColor' was not declared in this scope
-         ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
-                                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:39: error: too few arguments to function 'void ControlBall(int, int, int*, int*, COLORREF*, COLORREF*)'
+         ControlBall(x1, y1, &vx1, &vy1);
+                                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:7:6: note: declared here
+ void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* FillColor);
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void ControlBall(int, int, int*, int*)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:69:6: warning: no previous declaration for 'void ControlBall(int, int, int*, int*)' [-Wmissing-declarations]
+ void ControlBall(int x, int y, int* vx, int* vy)
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:80:40: warning: left operand of comma operator has no effect [-Wunused-value]
+             txSetColor = (TX_LIGHTRED, 2);
+                                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:80:24: error: assignment of function 'HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC)'
+             txSetColor = (TX_LIGHTRED, 2);
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:80:24: error: cannot convert 'int' to 'HPEN__*(COLORREF, double, HDC) {aka HPEN__*(long unsigned int, double, HDC__*)}' in assignment
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:81:28: error: assignment of function 'HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC)'
+             txSetFillColor = (TX_RED);
+                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:81:28: error: cannot convert 'const COLORREF {aka const long unsigned int}' to 'HBRUSH__*(COLORREF, HDC) {aka HBRUSH__*(long unsigned int, HDC__*)}' in assignment
 ---------------------------------------------------------------------------------------------
-[31.05.2021  2:36:46,87 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[31.05.2021  2:38:25,61 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
