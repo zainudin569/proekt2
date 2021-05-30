@@ -1,10 +1,4 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:8:1: error: expected initializer before 'int'
- int main()
- ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:40:45: error: 'PhysicsBall' was not declared in this scope
-         PhysicsBall(x1, y1, vx1, vy1, dt, r1);
-                                             ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:44:44: error: 'vx' was not declared in this scope
          if (txGetAsyncKeyState (VK_RIGHT)) vx++;
                                             ^
@@ -31,10 +25,6 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:68:33: error: 'x
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:68:38: error: 'y' was not declared in this scope
              txSetColor     (RGB(x,   y,   150), 2);
                                       ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void PhysicsBall(int, int, int, int, int, int)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:85:6: warning: no previous declaration for 'void PhysicsBall(int, int, int, int, int, int)' [-Wmissing-declarations]
- void PhysicsBall(int x, int y, int vx, int vy, int dt, int r)
-      ^
 ---------------------------------------------------------------------------------------------
-[31.05.2021  1:53:16,62 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[31.05.2021  1:53:28,27 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
