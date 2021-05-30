@@ -4,7 +4,7 @@
 void MoveBall();
 void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillColor);
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
-void ControlBall(int x, int y, int* vx, int* vy, COLORREF Color, COLORREF FillColor));
+void ControlBall(int x, int y, int* vx, int* vy, COLORREF* Color, COLORREF* FillColor);
 
 //---------------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ void MoveBall()
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
 
-        ControlBall(x1, y1, &vx1, &vy1, Color, FillColor);
+        ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
 
         txSleep (1);
         }
@@ -54,7 +54,7 @@ void MoveBall()
 
 //---------------------------------------------------------------------------------
 
-void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF FillColor)
+void DrowBall(int x, int y, int vx, int vy, int r, COLORREF* Color, COLORREF* FillColor)
     {
     txSetColor (Color, 2);
     txSetFillColor (FillColor);

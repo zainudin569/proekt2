@@ -1,16 +1,28 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:7:85: error: expected initializer before ')' token
- void ControlBall(int x, int y, int* vx, int* vy, COLORREF Color, COLORREF FillColor));
-                                                                                     ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:41: error: 'Color' was not declared in this scope
-         ControlBall(x1, y1, &vx1, &vy1, Color, FillColor);
-                                         ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:48: error: 'FillColor' was not declared in this scope
-         ControlBall(x1, y1, &vx1, &vy1, Color, FillColor);
-                                                ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:57: error: 'ControlBall' was not declared in this scope
-         ControlBall(x1, y1, &vx1, &vy1, Color, FillColor);
-                                                         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:42: error: 'Color' was not declared in this scope
+         ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
+                                          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:49:50: error: 'FillColor' was not declared in this scope
+         ControlBall(x1, y1, &vx1, &vy1, &Color, &FillColor);
+                                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void DrowBall(int, int, int, int, int, COLORREF*, COLORREF*)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:57:6: warning: no previous declaration for 'void DrowBall(int, int, int, int, int, COLORREF*, COLORREF*)' [-Wmissing-declarations]
+ void DrowBall(int x, int y, int vx, int vy, int r, COLORREF* Color, COLORREF* FillColor)
+      ^
+In file included from c:\users\zainu\desktop\курс\codeblocks\mingw\include\txlib.h:1:0,
+                 from C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:2:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:59:5: error: invalid conversion from 'COLORREF* {aka long unsigned int*}' to 'COLORREF {aka long unsigned int}' [-fpermissive]
+     txSetColor (Color, 2);
+     ^
+C:\Users\zainu\Desktop\курс\TX\TXLib.h:12881:6: error:   initializing argument 1 of 'HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC)' [-fpermissive]
+ HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:60:5: error: invalid conversion from 'COLORREF* {aka long unsigned int*}' to 'COLORREF {aka long unsigned int}' [-fpermissive]
+     txSetFillColor (FillColor);
+     ^
+C:\Users\zainu\Desktop\курс\TX\TXLib.h:12933:8: error:   initializing argument 1 of 'HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC)' [-fpermissive]
+ HBRUSH txSetFillColor (COLORREF color, HDC dc /*= txDC()*/)
+        ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void ControlBall(int, int, int*, int*, COLORREF, COLORREF)':
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:69:6: warning: no previous declaration for 'void ControlBall(int, int, int*, int*, COLORREF, COLORREF)' [-Wmissing-declarations]
  void ControlBall(int x, int y, int* vx, int* vy, COLORREF Color, COLORREF FillColor)
@@ -22,5 +34,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:81:14: error: in
              *FillColor = (TX_RED);
               ^
 ---------------------------------------------------------------------------------------------
-[31.05.2021  2:34:53,86 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[31.05.2021  2:35:44,36 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
