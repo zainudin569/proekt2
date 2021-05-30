@@ -32,9 +32,9 @@ void MoveBall()
      while (!txGetAsyncKeyState (VK_ESCAPE))
         {
 
-        DrowBall(x1, y1, vx1, vy1, TX_LIGHTBLUE , TX_BLUE)
-        DrowBall(x2, y2, vx2, vy2, TX_LIGHTRED  , TX_RED)
-        DrowBall(x2, y2, vx2, vy2, TX_LIGHTGREEN, TX_GREEN)
+        DrowBall(x1, y1, vx1, vy1, TX_LIGHTBLUE , TX_BLUE);
+        DrowBall(x2, y2, vx2, vy2, TX_LIGHTRED  , TX_RED);
+        DrowBall(x2, y2, vx2, vy2, TX_LIGHTGREEN, TX_GREEN);
 
         x += vx * dt;
         y += vy * dt;
