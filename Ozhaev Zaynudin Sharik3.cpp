@@ -49,7 +49,7 @@ void MoveBall()
         ControlBall(x1, y1, &vx1, &vy1);
 
         txClear ();
-        txSetFillColor (TX_BLECK);
+        txSetFillColor (TX_BLACK);
 
         txSleep (1);
         }
