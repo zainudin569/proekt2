@@ -94,7 +94,7 @@ void MoveBall()
         }
     }
 
-void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor)
+void DrowBall(int x, int y, int vx, int vy, COLORREF Color, COLORREF FillColor)
     {
     txSetColor (Color, 2);
     txSetFillColor (FillColor);
