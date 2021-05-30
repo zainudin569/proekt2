@@ -2,7 +2,7 @@
 #include "TXLib.h"
 
 void MoveBall();
-void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor);
+void DrowBall(int x, int y, int vx, int vy, COLORREF Color, COLORREF FillColor);
 
 int main()
     {
