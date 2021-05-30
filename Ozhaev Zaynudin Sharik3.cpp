@@ -38,8 +38,6 @@ void MoveBall()
      while (!txGetAsyncKeyState (VK_ESCAPE))
         {
 
-        txBegin();
-
         DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTBLUE , TX_BLUE);
         DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED);
         DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
@@ -50,12 +48,7 @@ void MoveBall()
 
         ControlBall(x1, y1, &vx1, &vy1);
 
-        txClear ();
-        txSetFillColor (TX_BLACK);
-
-        txEnd();
-
-        //txSleep (1);
+        txSleep (1);
         }
     }
 
