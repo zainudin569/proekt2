@@ -1,18 +1,18 @@
 
 #include "TXLib.h"
 
-void MpveBall();
+void MoveBall();
 
 int main()
     {
     txCreateWindow (800, 600);
 
-    MpveBall();
+    MoveBall();
 
     return 0;
     }
 
-void MpveBall()
+void MoveBall()
     {
      int x  = 100, y  = 100,
          vx =   5, vy =   3,
