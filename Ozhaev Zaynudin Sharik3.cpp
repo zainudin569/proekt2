@@ -37,9 +37,9 @@ void MoveBall()
         DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED);
         DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
 
-        PhysicsBall(&x1, y1, vx1, vy1, dt, r1);
-        PhysicsBall(&x2, y2, vx2, vy2, dt, r2);
-        PhysicsBall(&x3, y3, vx3, vy3, dt, r3);
+        PhysicsBall(&x1, &y1, vx1, vy1, dt, r1);
+        PhysicsBall(&x2, &y2, vx2, vy2, dt, r2);
+        PhysicsBall(&x3, &y3, vx3, vy3, dt, r3);
 
         if (txGetAsyncKeyState (VK_RIGHT)) vx1++;
         if (txGetAsyncKeyState (VK_LEFT))  vx1--;
