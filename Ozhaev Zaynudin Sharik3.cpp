@@ -65,8 +65,8 @@ void MoveBall()
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            txSetColor     (RGB(x,   y,   150), 2);
-            txSetFillColor (RGB(x/2, y/2, 150));
+            txSetColor     (RGB(x1,   y1,   150), 2);
+            txSetFillColor (RGB(x1/2, y1/2, 150));
             }
         txSleep (1);
         }
