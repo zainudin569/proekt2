@@ -29,7 +29,7 @@ void MpveBall()
         txCircle (x, y, r);
 
         txLine (x, y, x + vx*5, y + vy*5);
-        txCircle (x + vx*r%2, y + vy*r%2, 3);
+        txCircle (x + vx*r%150, y + vy*r%150, 3);
 
         x += vx * dt;
         y += vy * dt;
