@@ -1,3 +1,113 @@
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:106:0: error: unterminated argument list invoking macro "txSetFillColor"
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:5:45: error: 'COLLORREF' has not been declared
+ void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor);
+                                             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:5:62: error: 'COLLORREF' has not been declared
+ void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor);
+                                                              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void MoveBall()':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:36:9: error: expected ';' before 'DrowBall'
+         DrowBall(x2, y2, vx2, vy2, TX_LIGHTRED  , TX_RED)
+         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:40:9: error: 'y' was not declared in this scope
+         y += vy * dt;
+         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:40:14: error: 'vy' was not declared in this scope
+         y += vy * dt;
+              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:42:13: error: 'x' was not declared in this scope
+         if (x > 800 - r)
+             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:42:23: error: 'r' was not declared in this scope
+         if (x > 800 - r)
+                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:44:14: error: 'vx' was not declared in this scope
+              vx = -vx;
+              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:48:23: error: 'r' was not declared in this scope
+         if (y > 600 - r)
+                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:54:13: error: 'x' was not declared in this scope
+         if (x < 0 + r)
+             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:54:21: error: 'r' was not declared in this scope
+         if (x < 0 + r)
+                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:56:14: error: 'vx' was not declared in this scope
+              vx = -vx;
+              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:60:21: error: 'r' was not declared in this scope
+         if (y < 0 + r)
+                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:66:44: error: 'vx' was not declared in this scope
+         if (txGetAsyncKeyState (VK_RIGHT)) vx++;
+                                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:67:44: error: 'vx' was not declared in this scope
+         if (txGetAsyncKeyState (VK_LEFT))  vx--;
+                                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:71:49: error: 'vx' was not declared in this scope
+         if (txGetAsyncKeyState (VK_SPACE)) vy = vx = 0;
+                                                 ^
+In file included from c:\users\zainu\desktop\курс\codeblocks\mingw\include\txlib.h:1:0,
+                 from C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:2:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:90:33: error: 'x' was not declared in this scope
+             txSetColor     (RGB(x,   y,   150), 2);
+                                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:20:10: warning: unused variable 'r1' [-Wunused-variable]
+          r1 =  20;
+          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:22:10: warning: unused variable 'x2' [-Wunused-variable]
+      int x2 = 100,  y2 = 100,
+          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:22:21: warning: unused variable 'y2' [-Wunused-variable]
+      int x2 = 100,  y2 = 100,
+                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:23:9: warning: unused variable 'vx2' [-Wunused-variable]
+         vx2 =   5, vy2 =   3,
+         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:23:20: warning: unused variable 'vy2' [-Wunused-variable]
+         vx2 =   5, vy2 =   3,
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:24:10: warning: unused variable 'r2' [-Wunused-variable]
+          r2 =  20;
+          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:26:10: warning: unused variable 'x3' [-Wunused-variable]
+      int x3 = 100,  y3 = 100,
+          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:26:21: warning: unused variable 'y3' [-Wunused-variable]
+      int x3 = 100,  y3 = 100,
+                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:27:9: warning: unused variable 'vx3' [-Wunused-variable]
+         vx3 =   5, vy3 =   3,
+         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:27:20: warning: unused variable 'vy3' [-Wunused-variable]
+         vx3 =   5, vy3 =   3,
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:28:10: warning: unused variable 'r3' [-Wunused-variable]
+          r3 =  20;
+          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: At global scope:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:97:45: error: 'COLLORREF' has not been declared
+ void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor)
+                                             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:97:62: error: 'COLLORREF' has not been declared
+ void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor)
+                                                              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: In function 'void DrowBall(int, int, int, int, int, int)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:100:5: error: expected ';' at end of input
+     txSetFillColor (FillColor;
+     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:100:5: warning: statement is a reference, not call, to function '{anonymous}::TX::txSetFillColor' [-Waddress]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:100:5: warning: statement has no effect [-Wunused-value]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:100:5: error: expected '}' at end of input
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp: At global scope:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:97:6: warning: unused parameter 'x' [-Wunused-parameter]
+ void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor)
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:97:6: warning: unused parameter 'y' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:97:6: warning: unused parameter 'vx' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:97:6: warning: unused parameter 'vy' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp:97:6: warning: unused parameter 'FillColor' [-Wunused-parameter]
 ---------------------------------------------------------------------------------------------
-[31.05.2021  1:20:30,26 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[31.05.2021  1:41:57,84 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik3.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

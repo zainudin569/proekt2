@@ -1,35 +1,40 @@
 
 #include "TXLib.h"
 
-void MpveBall();
+void MoveBall();
+void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor);
 
 int main()
     {
     txCreateWindow (800, 600);
 
-    MpveBall();
+    MoveBall();
 
     return 0;
     }
 
-void MpveBall()
+void MoveBall()
     {
-     int x  = 100, y  = 100,
-         vx =   5, vy =   3,
-         r = 20;
+     int x1 = 100,  y1 = 100,
+        vx1 =   5, vy1 =   3,
+         r1 =  20;
+
+     int x2 = 100,  y2 = 100,
+        vx2 =   5, vy2 =   3,
+         r2 =  20;
+
+     int x3 = 100,  y3 = 100,
+        vx3 =   5, vy3 =   3,
+         r3 =  20;
 
      int dt = 1;
-
-     txSetColor (TX_LIGHTGREEN, 2);
-     txSetFillColor (TX_GREEN);
 
      while (!txGetAsyncKeyState (VK_ESCAPE))
         {
 
-        txCircle (x, y, r);
-
-        txLine (x, y, x + vx*5, y + vy*5);
-        txCircle (x + vx*5, y + vy*5, 3);
+        DrowBall(x1, y1, vx1, vy1, TX_LIGHTBLUE , TX_BLUE)
+        DrowBall(x2, y2, vx2, vy2, TX_LIGHTRED  , TX_RED)
+        DrowBall(x2, y2, vx2, vy2, TX_LIGHTGREEN, TX_GREEN)
 
         x += vx * dt;
         y += vy * dt;
@@ -87,4 +92,14 @@ void MpveBall()
             }
         txSleep (1);
         }
+    }
+
+void DrowBall(int x, int y, int vx, int vy, COLLORREF Color, COLLORREF FillColor)
+    {
+    txSetColor (Color, 2);
+    txSetFillColor (FillColor;
+
+    txCircle (x, y, r);
+    txLine (x, y, x + vx*5, y + vy*5);
+    txCircle (x + vx*5, y + vy*5, 3);
     }
