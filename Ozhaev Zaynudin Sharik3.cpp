@@ -77,8 +77,8 @@ void ControlBall(int x, int y, int* vx, int* vy)
 
         if (txGetAsyncKeyState (VK_F1))
             {
-            txSetColor = (TX_LIGHTRED, 2);
-            txSetFillColor = (TX_RED);
+            txSetColor (TX_LIGHTRED, 2);
+            txSetFillColor (TX_RED);
             }
         if (txGetAsyncKeyState (VK_F2))
             {
