@@ -74,7 +74,7 @@ void DrowBall(int x, int y, int vx, int vy, int r, COLORREF Color, COLORREF Fill
 
 void ControlBall(int x, int y, int* vx, int* vy)
         {
-        if (txGetAsyncKeyState (VK_RIGHT)) *vx = *vx + 1;
+        if (txGetAsyncKeyState (VK_RIGHT)) ++*vx;
         if (txGetAsyncKeyState (VK_LEFT))  --*vx;
         if (txGetAsyncKeyState (VK_UP))    --*vy;
         if (txGetAsyncKeyState (VK_DOWN))  ++*vy;
@@ -112,23 +112,23 @@ void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
 
     if (*x > 800 - r)
         {
-         *vx = - *vx;
+         *vx =   - *vx;
           *x = 800 - r;
         }
 
     if (*y > 600 - r)
         {
-         *vy = - *vy;
+         *vy =   - *vy;
           *y = 600 - r;
         }
 
-    if (*x < 0 + r)
+    if (*x <   0 + r)
         {
          *vx = - *vx;
           *x = 0 + r;
         }
 
-    if (*y < 0 + r)
+    if (*y <   0 + r)
         {
          *vy = - *vy;
           *y = 0 + r;
