@@ -14,21 +14,21 @@ int main()
 
 void MoveBall()
     {
-     int x  = 100, y  = 100,
-         vx =   5, vy =   3,
-         r = 20;
+    int x  = 100, y  = 100,
+        vx =   5, vy =   3,
+        r = 20;
 
-     int dt = 1;
+    int dt = 1;
 
-     int x2  = 150, y2  = 110,
-         vx2 =   3, vy2 =   4,
-         r2 = 30;
+    int x2  = 150, y2  = 110,
+        vx2 =   3, vy2 =   4,
+        r2 = 30;
 
-     int dt2 = 1;
-     txSetColor (TX_LIGHTGREEN, 2);
-     txSetFillColor (TX_GREEN);
+        int dt2 = 1;
+    txSetColor (TX_LIGHTGREEN, 2);
+    txSetFillColor (TX_GREEN);
 
-     while (!txGetAsyncKeyState (VK_ESCAPE))
+    while (!txGetAsyncKeyState (VK_ESCAPE))
         {
 
         txCircle (x, y, r);
