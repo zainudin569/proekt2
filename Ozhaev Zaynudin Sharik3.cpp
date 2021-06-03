@@ -98,8 +98,8 @@ void ControlBall(int x, int y, int* vx, int* vy)
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            txSetColor     (RGB(*x,   *y,   150), 2);
-            txSetFillColor (RGB(*x/2, *y/2, 150));
+            txSetColor     (RGB(x,   y,   150), 2);
+            txSetFillColor (RGB(x/2, y/2, 150));
             }
         }
 
