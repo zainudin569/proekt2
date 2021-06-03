@@ -54,27 +54,6 @@ void MoveBall()
 
         ControlBall(x1, y1, &vx1, &vy1);
 
-        if (txGetAsyncKeyState (VK_F1))
-            {
-            txSetColor (TX_LIGHTRED, 2);
-            txSetFillColor (TX_RED);
-            }
-        if (txGetAsyncKeyState (VK_F2))
-            {
-            txSetColor (TX_LIGHTBLUE, 2);
-            txSetFillColor (TX_BLUE);
-            }
-        if (txGetAsyncKeyState (VK_F3))
-            {
-            txSetColor (TX_LIGHTGREEN, 2);
-            txSetFillColor (TX_GREEN);
-            }
-        if (txGetAsyncKeyState (VK_F4))
-            {
-            txSetColor     (RGB(x1,   y1,   150), 2);
-            txSetFillColor (RGB(x1/2, y1/2, 150));
-            }
-
         txSleep (1);
         }
     }
@@ -119,8 +98,8 @@ void ControlBall(int x, int y, int* vx, int* vy)
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            txSetColor     (RGB(x,   y,   150), 2);
-            txSetFillColor (RGB(x/2, y/2, 150));
+            txSetColor     (RGB(*x,   *y,   150), 2);
+            txSetFillColor (RGB(*x/2, *y/2, 150));
             }
         }
 
