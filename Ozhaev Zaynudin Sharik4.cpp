@@ -1,6 +1,6 @@
 
 #include "TXLib.h"
-const int W = 1200;
+const int W = 1100;
 const int H = 720;
 
 void MoveBall();
@@ -94,15 +94,15 @@ void MoveBall()
              y2 = 0 + r2;
             }
 
-        float Dx = x1 - x2;
-      	float Dy = y1 - y2;
-      	float d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
-      	float s = Dx/d; // sin
-      	float e = Dy/d; // cos
+        int Dx = x1 - x2;
+      	int Dy = y1 - y2;
+      	int d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
+      	int s = Dx/d; // sin
+      	int e = Dy/d; // cos
       	if (d < r1+r2){
-      		float Vn1 = vx2*s + vy2*e;
-      		float Vn2 = vx1*s + vy1*e;
-      		float dt = (r2+r1-d)/(Vn1-Vn2);
+      		int Vn1 = vx2*s + vy2*e;
+      		int Vn2 = vx1*s + vy1*e;
+      		int dt = (r2+r1-d)/(Vn1-Vn2);
       		if (dt > 0.6) dt = 0.6;
       		if (dt < -0.6) dt = -0.6;
       		x1-=vx1*dt;
@@ -116,11 +116,11 @@ void MoveBall()
       		e = Dy/d; // cos
       		Vn1 = vx2*s + vy2*e;
       		Vn2 = vx1*s + vy1*e;
-      		float Vt1 = -vx2*e+vy2*s;
-      		float Vt2 = -vx1*e+vy1*s;
+      		int Vt1 = -vx2*e+vy2*s;
+      		int Vt2 = -vx1*e+vy1*s;
 
 
-      		float o = Vn2;
+      		int o = Vn2;
       		Vn2 = Vn1;
       		Vn1 = o;
 
