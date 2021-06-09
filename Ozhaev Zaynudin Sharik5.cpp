@@ -57,7 +57,7 @@ void MoveBall()
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
         PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
 
-        Physics2Ball(&x1, &y1, &x2, &y2, &vx1, &vy1, &vx2, &vy2)
+        Physics2Ball(&x1, &y1, &x2, &y2, &vx1, &vy1, &vx2, &vy2);
 
         ControlBall(x1, y1, &vx1, &vy1);
 
