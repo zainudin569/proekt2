@@ -59,10 +59,10 @@ void MoveBall()
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
         PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
 
-        Physics2Ball( &x1,  &y1,  &x2,  &y2,
+        /*Physics2Ball( &x1,  &y1,  &x2,  &y2,
                      &vx1, &vy1, &vx2, &vy2,
                       &r1, &r2, dt);
-
+         */
         ControlBall(x1, y1, &vx1, &vy1);
 
         txSleep (1);
@@ -174,7 +174,7 @@ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
         *vx2 = Vn1*sin - Vt1*cos; //обратный поворот системы координат шар2
         *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
 
-        *x1 += *vx1*dt;
+        *x1 = *x1 + *vx1*dt;
         *y1 = *y1 + *vy1*dt;
         *x2 = *x2 + *vx2*dt;
         *y2 = *y2 + *vy2*dt;
