@@ -152,8 +152,8 @@ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
                   int* vx1, int* vy1, int* vx2, int* vy2,
                   int*  r1, int* r2, int dt)
     {
-    float Dx = x1 - x2; // стороны треугольника
-    float Dy = y1 - y2; // стороны треугольника
+    float Dx = *x1 - *x2; // стороны треугольника
+    float Dy = *y1 - *y2; // стороны треугольника
     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
     float sin = Dx/d; // sin угла треугольника
     float cos = Dy/d; // cos угла треугольника
