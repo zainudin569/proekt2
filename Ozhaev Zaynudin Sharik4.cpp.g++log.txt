@@ -1,16 +1,7 @@
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:19:23: error: too many arguments to function 'int rand()'
-     float x1 = rand(10);
-                       ^
-In file included from C:\Users\zainu\Desktop\курс\TX\TXLib.h:851:0,
-                 from c:\users\zainu\desktop\курс\codeblocks\mingw\include\txlib.h:1,
-                 from C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:2:
-c:\users\zainu\desktop\курс\codeblocks\mingw\include\stdlib.h:352:37: note: declared here
- _CRTIMP int __cdecl __MINGW_NOTHROW rand (void);
-                                     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:19:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-     float x1 = rand(10);
-                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:19:21: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float x1 = rand();
+                     ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:20:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float y1 = rand() % H/2;
                           ^
@@ -69,5 +60,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:118:48: warning:
          d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
                                                 ^
 ---------------------------------------------------------------------------------------------
-[09.06.2021 18:28:23,84 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[09.06.2021 18:28:37,12 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
