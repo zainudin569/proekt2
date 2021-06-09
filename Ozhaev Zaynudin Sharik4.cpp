@@ -16,17 +16,17 @@ int main()
 
 void MoveBall()
     {
-    int x1 = W/4;
-    int y1 = H/2;
-    int x2 = W/4*3;
-    int y2 = H/2;
-    int r1 = 20;
-    int r2 = 50;
-    int vx1 = rand() % 10;
-    int vy1 = rand() % 10;
-    int vx2 = rand() % 10;
-    int vy2 = rand() % 10;
-    int dt = 1;
+    float x1 = W/4;
+    float y1 = H/2;
+    float x2 = W/4*3;
+    float y2 = H/2;
+    float r1 = 20;
+    float r2 = 50;
+    float vx1 = rand() % 10;
+    float vy1 = rand() % 10;
+    float vx2 = rand() % 10;
+    float vy2 = rand() % 10;
+    float dt = 1;
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
@@ -94,8 +94,8 @@ void MoveBall()
              y2 = 0 + r2;
             }
 
-        int Dx = x1 - x2;
-      	int Dy = y1 - y2;
+        float Dx = x1 - x2;
+      	float Dy = y1 - y2;
       	float d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
       	float s = Dx/d; // sin
       	float e = Dy/d; // cos
