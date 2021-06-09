@@ -174,9 +174,9 @@ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
         *vx2 = Vn1*sin - Vt1*cos; //обратный поворот системы координат шар2
         *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
 
-        *x1 += vx1*dt;
-        *y1 = *y1 + vy1*dt;
-        *x2 = *x2 + vx2*dt;
-        *y2 = *y2 + vy2*dt;
+        *x1 += *vx1*dt;
+        *y1 = *y1 + *vy1*dt;
+        *x2 = *x2 + *vx2*dt;
+        *y2 = *y2 + *vy2*dt;
         }
     }
