@@ -96,16 +96,18 @@ void MoveBall()
 
         float Dx = x1 - x2;
       	float Dy = y1 - y2;
-      	float d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
+      	float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
       	float s = Dx/d; // sin
       	float e = Dy/d; // cos
-      	if (d < r1+r2){
+
+      	if (d < r1 + r2)
+            {
       		float Vn1 = vx2*s + vy2*e;
       		float Vn2 = vx1*s + vy1*e;
-      		float dt = (r2+r1-d)/(Vn1-Vn2);
+      		float dt = (r2 + r1 - d)/(Vn1 - Vn2);
       		if (dt > 0.6) dt = 0.6;
       		if (dt < -0.6) dt = -0.6;
-      		x1-=vx1*dt;
+      		x1 = x1 - vx1*dt;
       		y1-=vy1*dt;
       		x2-=vx2*dt;
       		y2-=vy2*dt;
