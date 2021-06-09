@@ -113,16 +113,16 @@ void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
     *x += *vx * dt;
     *y += *vy * dt;
 
-    if (*x > 800 - r)
+    if (*x > W - r)
         {
          *vx =   - *vx;
-          *x = 800 - r;
+          *x = W - r;
         }
 
-    if (*y > 600 - r)
+    if (*y > H - r)
         {
          *vy =   - *vy;
-          *y = 600 - r;
+          *y = H - r;
         }
 
     if (*x <   0 + r)
