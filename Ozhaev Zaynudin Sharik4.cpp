@@ -116,8 +116,8 @@ void MoveBall()
       		e = Dy/d; // cos
       		Vn1 = vx2*s + vy2*e;
       		Vn2 = vx1*s + vy1*e;
-      		int Vt1 = -vx2*e+vy2*s;
-      		int Vt2 = -vx1*e+vy1*s;
+      		float Vt1 = -vx2*e+vy2*s;
+      		float Vt2 = -vx1*e+vy1*s;
 
 
       		float o = Vn2;
