@@ -39,8 +39,8 @@ void MoveBall()
 
         txCircle (x1, y1, r1);
 
-        x1 += vx1 * dt;
-        y1 += vy1 * dt;
+        int x1 += vx1 * dt;
+        int y1 += vy1 * dt;
 
         if (x1 > W - r1)
             {
@@ -71,8 +71,8 @@ void MoveBall()
 
         txCircle (x2, y2, r2);
 
-        x2 += vx2 * dt;
-        y2 += vy2 * dt;
+        int x2 += vx2 * dt;
+        int y2 += vy2 * dt;
 
         if (x2 > W - r2)
             {
@@ -98,20 +98,20 @@ void MoveBall()
              y2 = 0 + r2;
             }
 
-        float Dx = x1 - x2; // стороны треугольника
-      	float Dy = y1 - y2; // стороны треугольника
+        int Dx = x1 - x2; // стороны треугольника
+      	int Dy = y1 - y2; // стороны треугольника
       	double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-      	float s = Dx/d; // sin угла треугольника
-      	float e = Dy/d; // cos угла треугольника
+      	int s = Dx/d; // sin угла треугольника
+      	int e = Dy/d; // cos угла треугольника
 
       	if (d < r1 + r2) //проверка столкновения
             {
-      		float Vn1 = vx2*s + vy2*e; //поворот системы координат шар1
-      		float Vn2 = vx1*s + vy1*e; //поворот системы координат шар2
-      		float Vt1 = -vx2*e + vy2*s; //поворот системы координат шар1
-      		float Vt2 = -vx1*e + vy1*s; //поворот системы координат шар2
+      		int Vn1 = vx2*s + vy2*e; //поворот системы координат шар1
+      		int Vn2 = vx1*s + vy1*e; //поворот системы координат шар2
+      		int Vt1 = -vx2*e + vy2*s; //поворот системы координат шар1
+      		int Vt2 = -vx1*e + vy1*s; //поворот системы координат шар2
 
-      		float o = Vn2; //меняем местами vn1 и vn2
+      		int o = Vn2; //меняем местами vn1 и vn2
       		Vn2 = Vn1;
       		Vn1 = o;
 
