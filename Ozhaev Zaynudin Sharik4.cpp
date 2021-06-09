@@ -100,9 +100,9 @@ void MoveBall()
       	int s = Dx/d; // sin
       	int e = Dy/d; // cos
       	if (d < r1+r2){
-      		int Vn1 = vx2*s + vy2*e;
-      		int Vn2 = vx1*s + vy1*e;
-      		int dt = (r2+r1-d)/(Vn1-Vn2);
+      		float Vn1 = vx2*s + vy2*e;
+      		float Vn2 = vx1*s + vy1*e;
+      		float dt = (r2+r1-d)/(Vn1-Vn2);
       		if (dt > 0.6) dt = 0.6;
       		if (dt < -0.6) dt = -0.6;
       		x1-=vx1*dt;
