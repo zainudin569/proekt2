@@ -31,6 +31,7 @@ void MoveBall()
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
+        txClear ();
         txSetColor (TX_LIGHTGREEN, 2);
         txSetFillColor (TX_GREEN);
 
