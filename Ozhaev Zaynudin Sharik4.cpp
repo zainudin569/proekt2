@@ -17,16 +17,16 @@ int main()
 void MoveBall()
     {
     srand(time(NULL));
-    float x1 = rand() % W;
-    float y1 = rand() % H;
-    float x2 = rand() % W;
-    float y2 = rand() % H;
-    float r1 = 15 + rand() % 35;
-    float r2 = 15 + rand() % 35;
-    float vx1 = rand() % 10;
-    float vy1 = rand() % 10;
-    float vx2 = rand() % 10;
-    float vy2 = rand() % 10;
+    int x1 = rand() % W;
+    int y1 = rand() % H;
+    int x2 = rand() % W;
+    int y2 = rand() % H;
+    int r1 = 15 + rand() % 35;
+    int r2 = 15 + rand() % 35;
+    int vx1 = rand() % 10;
+    int vy1 = rand() % 10;
+    int vx2 = rand() % 10;
+    int vy2 = rand() % 10;
     float dt = 1;
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
@@ -100,7 +100,7 @@ void MoveBall()
 
         float Dx = x1 - x2; // стороны треугольника
       	float Dy = y1 - y2; // стороны треугольника
-      	float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+      	double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
       	float s = Dx/d; // sin угла треугольника
       	float e = Dy/d; // cos угла треугольника
 
@@ -108,25 +108,6 @@ void MoveBall()
             {
       		float Vn1 = vx2*s + vy2*e; //поворот системы координат шар1
       		float Vn2 = vx1*s + vy1*e; //поворот системы координат шар2
-
-      		/*dt = (r2 + r1 - d)/(Vn1 - Vn2);
-      		if (dt > 0.6) dt = 0.6;
-      		if (dt < -0.6) dt = -0.6;
-
-      		x1 = x1 - vx1*dt;
-      		y1 = y1 - vy1*dt;
-      		x2 = x2 - vx2*dt;
-      		y2 = y2 - vy2*dt;
-
-      		Dx = x1 - x2;
-      		Dy = y1 - y2;
-      		d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
-      		s = Dx/d; // sin
-      		e = Dy/d; // cos
-      		Vn1 = vx2*s + vy2*e;
-      		Vn2 = vx1*s + vy1*e;
-      		*/
-
       		float Vt1 = -vx2*e + vy2*s; //поворот системы координат шар1
       		float Vt2 = -vx1*e + vy1*s; //поворот системы координат шар2
 
@@ -134,10 +115,10 @@ void MoveBall()
       		Vn2 = Vn1;
       		Vn1 = o;
 
-      		vx1 = Vn2*s - Vt2*e; //поворот системы координат шар1
-      		vy1 = Vn2*e + Vt2*s; //поворот системы координат шар1
-      		vx2 = Vn1*s - Vt1*e; //поворот системы координат шар2
-      		vy2 = Vn1*e + Vt1*s; //поворот системы координат шар2
+      		vx1 = Vn2*s - Vt2*e; //обратный поворот системы координат шар1
+      		vy1 = Vn2*e + Vt2*s; //обратный поворот системы координат шар1
+      		vx2 = Vn1*s - Vt1*e; //обратный поворот системы координат шар2
+      		vy2 = Vn1*e + Vt1*s; //обратный поворот системы координат шар2
 
       		x1 = x1 + vx1*dt;
       		y1 = y1 + vy1*dt;
