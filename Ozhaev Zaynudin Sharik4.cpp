@@ -98,16 +98,17 @@ void MoveBall()
              y2 = 0 + r2;
             }
 
-        float Dx = x1 - x2;
-      	float Dy = y1 - y2;
-      	float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
-      	float s = Dx/d; // sin
-      	float e = Dy/d; // cos
+        float Dx = x1 - x2; // стороны треугольника
+      	float Dy = y1 - y2; // стороны треугольника
+      	float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+      	float s = Dx/d; // sin угла треугольника
+      	float e = Dy/d; // cos угла треугольника
 
-      	if (d < r1 + r2)
+      	if (d < r1 + r2) //проверка столкновения
             {
-      		float Vn1 = vx2*s + vy2*e;
-      		float Vn2 = vx1*s + vy1*e;
+      		float Vn1 = vx2*s + vy2*e; //поворот системы координат шар1
+      		float Vn2 = vx1*s + vy1*e; //поворот системы координат шар2
+
       		float dt = (r2 + r1 - d)/(Vn1 - Vn2);
       		if (dt > 0.6) dt = 0.6;
       		if (dt < -0.6) dt = -0.6;
@@ -127,19 +128,19 @@ void MoveBall()
       		float Vt1 = -vx2*e + vy2*s;
       		float Vt2 = -vx1*e + vy1*s;
 
-      		float o = Vn2;
+      		float o = Vn2; //меняем местами vn1 и vn2
       		Vn2 = Vn1;
       		Vn1 = o;
 
-      		vx1 = Vn2*s - Vt2*e;
-      		vy1 = Vn2*e + Vt2*s;
-      		vx2 = Vn1*s - Vt1*e;
-      		vy2 = Vn1*e + Vt1*s;
+      		vx1 = Vn2*s - Vt2*e; //поворот системы координат шар1
+      		vy1 = Vn2*e + Vt2*s; //поворот системы координат шар1
+      		vx2 = Vn1*s - Vt1*e; //поворот системы координат шар2
+      		vy2 = Vn1*e + Vt1*s; //поворот системы координат шар2
 
-      		x1 = x1+vx1*dt;
-      		y1 = y1+vy1*dt;
-      		x2 = x2+vx2*dt;
-      		y2 = y2+vy2*dt;
+      		x1 = x1 + vx1*dt;
+      		y1 = y1 + vy1*dt;
+      		x2 = x2 + vx2*dt;
+      		y2 = y2 + vy2*dt;
       	}
 
 
