@@ -14,9 +14,9 @@ int main()
 
 void MoveBall()
     {
-    int x  = 100, y  = 100,
-        vx =   5, vy =   3,
-        r = 20;
+    int x1  = 100, y1  = 100,
+        vx1 =   5, vy1 =   3,
+        r1 = 20;
 
     int dt = 1;
 
@@ -24,37 +24,36 @@ void MoveBall()
         vx2 =   3, vy2 =   4,
         r2 = 30;
 
-        int dt2 = 1;
     txSetColor (TX_LIGHTGREEN, 2);
     txSetFillColor (TX_GREEN);
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
 
-        txCircle (x, y, r);
+        txCircle (x1, y1, r1);
 
-        x += vx * dt;
-        y += vy * dt;
+        x1 += vx1 * dt;
+        y1 += vy1 * dt;
 
-        if (x > 800 - r)
+        if (x1 > 800 - r1)
             {
-             vx = -vx;
-             x = 800 - r;
+             vx1 = -vx1;
+             x1 = 800 - r1;
             }
 
-        if (y > 600 - r)
+        if (y1 > 600 - r1)
             {
-             vy = -vy;
-             y = 600 - r;
+             vy1 = -vy1;
+             y1 = 600 - r1;
             }
 
-        if (x < 0 + r)
+        if (x1 < 0 + r1)
             {
-             vx = -vx;
-             x = 0 + r;
+             vx1 = -vx1;
+             x1 = 0 + r1;
             }
 
-        if (y < 0 + r)
+        if (y1 < 0 + r1)
             {
              vy = -vy;
              y = 0 + r;
@@ -65,8 +64,8 @@ void MoveBall()
 
         txCircle (x2, y2, r2);
 
-        x2 += vx2 * dt2;
-        y2 += vy2 * dt2;
+        x2 += vx2 * dt;
+        y2 += vy2 * dt;
 
         if (x2 > 800 - r2)
             {
