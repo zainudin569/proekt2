@@ -5,7 +5,7 @@ const int H = 720;
 void MoveBall();
 void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillColor);
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
-void Physics2Ball(int* x1, int* y1, int* x2, int* y2, int* vx1, int* vy1, int* vx2, int* vy2)
+void Physics2Ball(int* x1, int* y1, int* x2, int* y2, int* vx1, int* vy1, int* vx2, int* vy2);
 void ControlBall(int x, int y, int* vx, int* vy);
 
 //---------------------------------------------------------------------------------

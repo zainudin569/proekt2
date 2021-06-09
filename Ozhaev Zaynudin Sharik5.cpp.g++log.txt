@@ -1,21 +1,8 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:9:1: error: expected initializer before 'void'
- void ControlBall(int x, int y, int* vx, int* vy);
- ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:60:64: error: 'Physics2Ball' was not declared in this scope
-         Physics2Ball(&x1, &y1, &x2, &y2, &vx1, &vy1, &vx2, &vy2)
-                                                                ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:62:9: error: expected ';' before 'ControlBall'
          ControlBall(x1, y1, &vx1, &vy1);
          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void ControlBall(int, int, int*, int*)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:82:6: warning: no previous declaration for 'void ControlBall(int, int, int*, int*)' [-Wmissing-declarations]
- void ControlBall(int x, int y, int* vx, int* vy)
-      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:147:6: warning: no previous declaration for 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*)' [-Wmissing-declarations]
- void Physics2Ball(int* x1, int* y1, int* x2, int* y2, int* vx1, int* vy1, int* vx2, int* vy2)
-      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:149:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float Dx = x1 - x2; // стороны треугольника
                    ^
@@ -80,5 +67,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:175:5: error: ex
      }
      ^
 ---------------------------------------------------------------------------------------------
-[10.06.2021  0:53:12,51 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[10.06.2021  0:53:25,01 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
