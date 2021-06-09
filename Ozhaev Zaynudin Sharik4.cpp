@@ -16,6 +16,7 @@ int main()
 
 void MoveBall()
     {
+    srand(time(NULL));
     float x1 = rand() % W;
     float y1 = rand() % H;
     float x2 = rand() % W;
