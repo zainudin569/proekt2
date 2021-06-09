@@ -22,21 +22,22 @@ int main()
 
 void MoveBall()
     {
-    int x1 = 100,  y1 = 100,
-       vx1 =   2, vy1 =   3,
-        r1 =  10;
+    srand(time(NULL));
+    float  x1 = rand() % W,   y1 = rand() % H,
+          vx1 = rand() % 10, vy1 = rand() % 10,
+           r1 = 15 + rand() % 35;
 
-    int x2 = 150,  y2 = 110,
-       vx2 =   7, vy2 =   2,
-        r2 =  25;
+    float x2 = rand() % W,   y2 = rand() % H,
+         vx2 = rand() % 10, vy2 = rand() % 10,
+          r2 = 15 + rand() % 35,;
 
-    int x3 = 100,  y3 = 150,
-       vx3 =   5, vy3 =   3,
-       r3 =  15;
+    float x3 = rand() % W,   y3 = rand() % H,
+         vx3 = rand() % 10, vy3 = rand() % 10,
+          r3 = 15 + rand() % 35,;
 
-    int x4 = 150,  y4 = 150,
-       vx4 =   3, vy4 =   6,
-        r4 =  20;
+    float x4 = rand() % W,   y4 = rand() % H,
+         vx4 = rand() % 10, vy4 = rand() % 10,
+          r4 = 15 + rand() % 35,;
 
     int dt = 1;
 
