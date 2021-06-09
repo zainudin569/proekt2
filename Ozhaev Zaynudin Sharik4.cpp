@@ -1,11 +1,13 @@
 
 #include "TXLib.h"
+const int W = 800;
+const int H = 600;
 
 void MoveBall();
 
 int main()
     {
-    txCreateWindow (800, 600);
+    txCreateWindow (W, H);
 
     MoveBall();
 
@@ -14,12 +16,12 @@ int main()
 
 void MoveBall()
     {
-    float x1 = 800/4;
-    float y1 = 600/2;
-    float x2 = 800/4*3;
-    float y2 = 600/2;
-    float r1 = 20;
-    float r2 = 50;
+    float x1 = W/4;
+    float y1 = H/2;
+    float x2 = W/4*3;
+    float y2 = H/2;
+    int r1 = 20;
+    int r2 = 50;
     float vx1 = rand() % 10;
     float vy1 = rand() % 10;
     float vx2 = rand() % 10;
