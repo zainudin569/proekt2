@@ -1,7 +1,7 @@
 
 #include "TXLib.h"
 const int W = 1200;
-const int H = 600;
+const int H = 800;
 
 void MoveBall();
 
@@ -38,16 +38,16 @@ void MoveBall()
         x1 += vx1 * dt;
         y1 += vy1 * dt;
 
-        if (x1 > 800 - r1)
+        if (x1 > W - r1)
             {
              vx1 = -vx1;
-             x1 = 800 - r1;
+             x1 = W - r1;
             }
 
-        if (y1 > 600 - r1)
+        if (y1 > H - r1)
             {
              vy1 = -vy1;
-             y1 = 600 - r1;
+             y1 = H - r1;
             }
 
         if (x1 < 0 + r1)
@@ -70,16 +70,16 @@ void MoveBall()
         x2 += vx2 * dt;
         y2 += vy2 * dt;
 
-        if (x2 > 800 - r2)
+        if (x2 > W - r2)
             {
              vx2 = -vx2;
-             x2 = 800 - r2;
+             x2 = W - r2;
             }
 
-        if (y2 > 600 - r2)
+        if (y2 > H - r2)
             {
              vy2 = -vy2;
-             y2 = 600 - r2;
+             y2 = H - r2;
             }
 
         if (x2 < 0 + r2)
