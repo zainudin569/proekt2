@@ -18,7 +18,7 @@ void MoveBall()
     float y1 = 600/2;
     float x2 = 800/4*3;
     float y2 = 600/2;
-    float r1 = 50;
+    float r1 = 20;
     float r2 = 50;
     float vx1 = rand() % 10;
     float vy1 = rand() % 10;
