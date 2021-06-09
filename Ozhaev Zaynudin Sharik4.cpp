@@ -16,12 +16,12 @@ int main()
 
 void MoveBall()
     {
-    float x1 = rand();
-    float y1 = rand() % H/2;
-    float x2 = rand() % W/4*3;
-    float y2 = rand() % H/2;
-    float r1 = rand() % 50;
-    float r2 = rand() % 50;
+    float x1 = rand() % W;
+    float y1 = rand() % H;
+    float x2 = rand() % W;
+    float y2 = rand() % H;
+    float r1 = 15 + rand() % 35;
+    float r2 = 15 + rand() % 35;
     float vx1 = rand() % 10;
     float vy1 = rand() % 10;
     float vx2 = rand() % 10;
