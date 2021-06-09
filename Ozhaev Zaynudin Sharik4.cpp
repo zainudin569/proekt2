@@ -1,7 +1,7 @@
 
 #include "TXLib.h"
 const int W = 1200;
-const int H = 800;
+const int H = 720;
 
 void MoveBall();
 
