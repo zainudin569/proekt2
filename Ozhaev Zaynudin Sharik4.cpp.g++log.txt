@@ -1,53 +1,43 @@
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:42:16: error: expected initializer before '+=' token
-         int x1 += vx1 * dt;
-                ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:43:16: error: expected initializer before '+=' token
-         int y1 += vy1 * dt;
-                ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:74:16: error: expected initializer before '+=' token
-         int x2 += vx2 * dt;
-                ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:75:16: error: expected initializer before '+=' token
-         int y2 += vy2 * dt;
-                ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:103:49: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-        double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-                                                 ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:104:18: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]
-        int s = Dx/d; // sin угла треугольника
-                  ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:105:18: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]
-        int e = Dy/d; // cos угла треугольника
-                  ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:123:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         x1 = x1 + vx1*dt;
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:20:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float x1 = rand() % W;
                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:123:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:123:17: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         x1 = x1 + vx1*dt;
-                 ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:124:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         y1 = y1 + vy1*dt;
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:21:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float y1 = rand() % H;
                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:124:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:124:17: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         y1 = y1 + vy1*dt;
-                 ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:125:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         x2 = x2 + vx2*dt;
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:22:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float x2 = rand() % W;
                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:125:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:125:17: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         x2 = x2 + vx2*dt;
-                 ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:126:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         y2 = y2 + vy2*dt;
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:23:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float y2 = rand() % H;
                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:126:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:126:17: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         y2 = y2 + vy2*dt;
-                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:24:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float r1 = 15 + rand() % 35;
+                   ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:25:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float r2 = 15 + rand() % 35;
+                   ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:26:24: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float vx1 = rand() % 10;
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:27:24: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float vy1 = rand() % 10;
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:28:24: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float vx2 = rand() % 10;
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:29:24: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float vy2 = rand() % 10;
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:103:36: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
+        float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+                                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:103:48: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+        float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+                                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:103:53: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+        float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+                                                     ^
 ---------------------------------------------------------------------------------------------
-[09.06.2021 23:45:48,32 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[09.06.2021 23:47:03,78 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

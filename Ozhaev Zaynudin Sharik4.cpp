@@ -17,16 +17,16 @@ int main()
 void MoveBall()
     {
     srand(time(NULL));
-    int x1 = rand() % W;
-    int y1 = rand() % H;
-    int x2 = rand() % W;
-    int y2 = rand() % H;
-    int r1 = 15 + rand() % 35;
-    int r2 = 15 + rand() % 35;
-    int vx1 = rand() % 10;
-    int vy1 = rand() % 10;
-    int vx2 = rand() % 10;
-    int vy2 = rand() % 10;
+    float x1 = rand() % W;
+    float y1 = rand() % H;
+    float x2 = rand() % W;
+    float y2 = rand() % H;
+    float r1 = 15 + rand() % 35;
+    float r2 = 15 + rand() % 35;
+    float vx1 = rand() % 10;
+    float vy1 = rand() % 10;
+    float vx2 = rand() % 10;
+    float vy2 = rand() % 10;
     float dt = 1;
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
@@ -39,8 +39,8 @@ void MoveBall()
 
         txCircle (x1, y1, r1);
 
-        int x1 += vx1 * dt;
-        int y1 += vy1 * dt;
+        x1 += vx1 * dt;
+        y1 += vy1 * dt;
 
         if (x1 > W - r1)
             {
@@ -71,8 +71,8 @@ void MoveBall()
 
         txCircle (x2, y2, r2);
 
-        int x2 += vx2 * dt;
-        int y2 += vy2 * dt;
+        x2 += vx2 * dt;
+        y2 += vy2 * dt;
 
         if (x2 > W - r2)
             {
@@ -98,20 +98,20 @@ void MoveBall()
              y2 = 0 + r2;
             }
 
-        int Dx = x1 - x2; // стороны треугольника
-      	int Dy = y1 - y2; // стороны треугольника
-      	double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-      	int s = Dx/d; // sin угла треугольника
-      	int e = Dy/d; // cos угла треугольника
+        float Dx = x1 - x2; // стороны треугольника
+      	float Dy = y1 - y2; // стороны треугольника
+      	float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+      	float s = Dx/d; // sin угла треугольника
+      	float e = Dy/d; // cos угла треугольника
 
       	if (d < r1 + r2) //проверка столкновения
             {
-      		int Vn1 = vx2*s + vy2*e; //поворот системы координат шар1
-      		int Vn2 = vx1*s + vy1*e; //поворот системы координат шар2
-      		int Vt1 = -vx2*e + vy2*s; //поворот системы координат шар1
-      		int Vt2 = -vx1*e + vy1*s; //поворот системы координат шар2
+      		float Vn1 = vx2*s + vy2*e; //поворот системы координат шар1
+      		float Vn2 = vx1*s + vy1*e; //поворот системы координат шар2
+            float Vt1 = -vx2*e + vy2*s; //поворот системы координат шар1
+      		float Vt2 = -vx1*e + vy1*s; //поворот системы координат шар2
 
-      		int o = Vn2; //меняем местами vn1 и vn2
+      		float o = Vn2; //меняем местами vn1 и vn2
       		Vn2 = Vn1;
       		Vn1 = o;
 
