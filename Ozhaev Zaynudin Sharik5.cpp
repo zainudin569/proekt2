@@ -5,6 +5,7 @@ const int H = 720;
 void MoveBall();
 void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillColor);
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
+void Physics2Ball(int* x1, int* y1, int* x2, int* y2, int* vx1, int* vy1, int* vx2, int* vy2)
 void ControlBall(int x, int y, int* vx, int* vy);
 
 //---------------------------------------------------------------------------------
@@ -55,6 +56,8 @@ void MoveBall()
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
         PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
+
+        Physics2Ball(&x1, &y1, &x2, &y2, &vx1, &vy1, &vx2, &vy2)
 
         ControlBall(x1, y1, &vx1, &vy1);
 
@@ -137,4 +140,36 @@ void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
          *vy = - *vy;
           *y = 0 + r;
         }
+    }
+
+//---------------------------------------------------------------------------------
+
+void Physics2Ball(int* x1, int* y1, int* x2, int* y2, int* vx1, int* vy1, int* vx2, int* vy2)
+    {
+    float Dx = x1 - x2; // стороны треугольника
+    float Dy = y1 - y2; // стороны треугольника
+    float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+    float sin = Dx/d; // sin угла треугольника
+    float cos = Dy/d; // cos угла треугольника
+
+    if (d < r1 + r2) //проверка столкновения
+        {
+        float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
+        float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
+        float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
+        float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
+
+        float o = Vn2; //меняем местами vn1 и vn2
+        Vn2 = Vn1;
+        Vn1 = o;
+
+        *vx1 = Vn2*sin - Vt2*cos; //обратный поворот системы координат шар1
+        *vy1 = Vn2*cos + Vt2*sin; //обратный поворот системы координат шар1
+        *vx2 = Vn1*sin - Vt1*cos; //обратный поворот системы координат шар2
+        *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
+
+        *x1 = *x1 + vx1*dt;
+        *y1 = *y1 + vy1*dt;
+        *x2 = *x2 + vx2*dt;
+        *y2 = *y2 + vy2*dt;
     }
