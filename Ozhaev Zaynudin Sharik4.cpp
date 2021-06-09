@@ -22,11 +22,11 @@ void MoveBall()
     float y2 = H/2;
     int r1 = 20;
     int r2 = 50;
-    float vx1 = rand() % 10;
-    float vy1 = rand() % 10;
-    float vx2 = rand() % 10;
-    float vy2 = rand() % 10;
-    float dt = 1;
+    int vx1 = rand() % 10;
+    int vy1 = rand() % 10;
+    int vx2 = rand() % 10;
+    int vy2 = rand() % 10;
+    int dt = 1;
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
