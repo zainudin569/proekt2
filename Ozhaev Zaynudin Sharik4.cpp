@@ -16,7 +16,7 @@ int main()
 
 void MoveBall()
     {
-    float x1 = W/4;
+    float x1 = rand(W/4);
     float y1 = H/2;
     float x2 = W/4*3;
     float y2 = H/2;
@@ -107,34 +107,35 @@ void MoveBall()
       		float dt = (r2 + r1 - d)/(Vn1 - Vn2);
       		if (dt > 0.6) dt = 0.6;
       		if (dt < -0.6) dt = -0.6;
+
       		x1 = x1 - vx1*dt;
-      		y1-=vy1*dt;
-      		x2-=vx2*dt;
-      		y2-=vy2*dt;
+      		y1 = y1 - vy1*dt;
+      		x2 = x2 - vx2*dt;
+      		y2 = y2 - vy2*dt;
+
       		Dx = x1 - x2;
       		Dy = y1 - y2;
-      		d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
+      		d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
       		s = Dx/d; // sin
       		e = Dy/d; // cos
       		Vn1 = vx2*s + vy2*e;
       		Vn2 = vx1*s + vy1*e;
-      		float Vt1 = -vx2*e+vy2*s;
-      		float Vt2 = -vx1*e+vy1*s;
-
+      		float Vt1 = -vx2*e + vy2*s;
+      		float Vt2 = -vx1*e + vy1*s;
 
       		float o = Vn2;
       		Vn2 = Vn1;
       		Vn1 = o;
 
+      		vx1 = Vn2*s - Vt2*e;
+      		vy1 = Vn2*e + Vt2*s;
+      		vx2 = Vn1*s - Vt1*e;
+      		vy2 = Vn1*e + Vt1*s;
 
-      		vx1 = Vn2*s-Vt2*e;
-      		vy1 = Vn2*e+Vt2*s;
-      		vx2 = Vn1*s-Vt1*e;
-      		vy2 = Vn1*e+Vt1*s;
-      		x1+=vx1*dt;
-      		y1+=vy1*dt;
-      		x2+=vx2*dt;
-      		y2+=vy2*dt;
+      		x1 = x1+vx1*dt;
+      		y1 = y1+vy1*dt;
+      		x2 = x2+vx2*dt;
+      		y2 = y2+vy2*dt;
       	}
 
 
