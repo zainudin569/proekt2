@@ -16,10 +16,10 @@ int main()
 
 void MoveBall()
     {
-    float x1 = W/4;
-    float y1 = H/2;
-    float x2 = W/4*3;
-    float y2 = H/2;
+    int x1 = W/4;
+    int y1 = H/2;
+    int x2 = W/4*3;
+    int y2 = H/2;
     int r1 = 20;
     int r2 = 50;
     int vx1 = rand() % 10;
