@@ -11,36 +11,36 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:25:24: warning: 
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:26:24: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float vy2 = rand() % 10;
                         ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:98:34: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:97:34: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
         float d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
                                   ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:98:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:97:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
         float d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
                                               ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:98:51: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:97:51: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
         float d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
                                                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:104:15: warning: declaration of 'dt' shadows a previous local [-Wshadow]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:103:15: warning: declaration of 'dt' shadows a previous local [-Wshadow]
          float dt = (r2+r1-d)/(Vn1-Vn2);
                ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:27:11: warning: shadowed declaration is here [-Wshadow]
      float dt = 1;
            ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:105:26: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:104:26: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
          if (dt > 0.6) dt = 0.6;
                           ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:106:27: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:105:27: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
          if (dt < -0.6) dt = -0.6;
                            ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:113:29: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:112:29: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
          d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
                              ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:113:41: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:112:41: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
          d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
                                          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:113:46: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp:112:46: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
          d = sqrt(Dx*Dx+Dy*Dy); if (d == 0) d = 0.01;
                                               ^
 ---------------------------------------------------------------------------------------------
-[09.06.2021 17:39:09,71 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[09.06.2021 17:41:12,14 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

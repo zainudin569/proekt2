@@ -26,11 +26,10 @@ void MoveBall()
     float vy2 = rand() % 10;
     float dt = 1;
 
-    txSetColor (TX_LIGHTGREEN, 2);
-    txSetFillColor (TX_GREEN);
-
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
+        txSetColor (TX_LIGHTGREEN, 2);
+        txSetFillColor (TX_GREEN);
 
         txCircle (x1, y1, r1);
 
@@ -60,7 +59,7 @@ void MoveBall()
              vy1 = -vy1;
              y1 = 0 + r1;
             }
-    //________________________________________________________________
+    //------------------------------------------------------------
         txSetColor (TX_LIGHTRED, 2);
         txSetFillColor (TX_RED);
 
