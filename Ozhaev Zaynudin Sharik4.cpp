@@ -109,7 +109,7 @@ void MoveBall()
       		float Vn1 = vx2*s + vy2*e; //поворот системы координат шар1
       		float Vn2 = vx1*s + vy1*e; //поворот системы координат шар2
 
-      		/*float dt = (r2 + r1 - d)/(Vn1 - Vn2);
+      		/*dt = (r2 + r1 - d)/(Vn1 - Vn2);
       		if (dt > 0.6) dt = 0.6;
       		if (dt < -0.6) dt = -0.6;
 
@@ -125,9 +125,11 @@ void MoveBall()
       		e = Dy/d; // cos
       		Vn1 = vx2*s + vy2*e;
       		Vn2 = vx1*s + vy1*e;
-      		float Vt1 = -vx2*e + vy2*s;
-      		float Vt2 = -vx1*e + vy1*s;
-            */
+      		*/
+
+      		float Vt1 = -vx2*e + vy2*s; //поворот системы координат шар1
+      		float Vt2 = -vx1*e + vy1*s; //поворот системы координат шар2
+
       		float o = Vn2; //меняем местами vn1 и vn2
       		Vn2 = Vn1;
       		Vn1 = o;
