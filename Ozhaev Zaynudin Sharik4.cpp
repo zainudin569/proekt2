@@ -20,10 +20,10 @@ void MoveBall()
     float y2 = 600/2;
     float r1 = 50;
     float r2 = 50;
-    float dx1 = rand() % 10;
-    float dy1 = rand() % 10;
-    float dx2 = rand() % 10;
-    float dy2 = rand() % 10;
+    float vx1 = rand() % 10;
+    float vy1 = rand() % 10;
+    float vx2 = rand() % 10;
+    float vy2 = rand() % 10;
 
     txSetColor (TX_LIGHTGREEN, 2);
     txSetFillColor (TX_GREEN);
