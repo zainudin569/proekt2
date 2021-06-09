@@ -1,0 +1,354 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe,
+
+ВНЕЗАПНО: Целочисленное деление на ноль.
+
+#1: Исключение EXCEPTION_INT_DIVIDE_BY_ZERO (0xC0000094) при выполнении кода по адресу 0x0042C2F0 в функции MoveBall() в файле C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp на строке 105. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400], Instance: 0x005062F4 (32-bit), Flags: CMdRe0, Thread: 0x3240 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042C2F0 in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: MoveBall() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (105):
+
+    103:       		int Vn1 = vx2*s + vy2*e;
+    104:       		int Vn2 = vx1*s + vy1*e;
+=>  105:       		int dt = (r2+r1-d)/(Vn1-Vn2);
+    106:       		if (dt > 0.6) dt = 0.6;
+    107:       		if (dt < -0.6) dt = -0.6;
+
+# 1 0x0042BEFB in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: main() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (12):
+
+     10:     txCreateWindow (W, H);
+     11: 
+=>   12:     MoveBall();
+     13: 
+     14:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void MoveBall() at C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp (68):
+
+     66:         txSetFillColor (TX_RED);
+     67: 
+=>   68:         txCircle (x2, y2, r2);
+     69: 
+     70:         x2 += vx2 * dt;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\zainu\Desktop\курс\TX\TXLib.h
+Compiled:	Jun  9 2021 18:06:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 09 2021 18:06:37
+
+Run file:	C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe
+Directory:	C:\Users\zainu\Desktop\курс\proekt2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe,
+
+ВНЕЗАПНО: Целочисленное деление на ноль.
+
+#1: Исключение EXCEPTION_INT_DIVIDE_BY_ZERO (0xC0000094) при выполнении кода по адресу 0x0042C2F0 в функции MoveBall() в файле C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp на строке 105. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400], Instance: 0x005062F4 (32-bit), Flags: CMdRe0, Thread: 0x3240 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042C2F0 in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: MoveBall() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (105):
+
+    103:       		int Vn1 = vx2*s + vy2*e;
+    104:       		int Vn2 = vx1*s + vy1*e;
+=>  105:       		int dt = (r2+r1-d)/(Vn1-Vn2);
+    106:       		if (dt > 0.6) dt = 0.6;
+    107:       		if (dt < -0.6) dt = -0.6;
+
+# 1 0x0042BEFB in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: main() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (12):
+
+     10:     txCreateWindow (W, H);
+     11: 
+=>   12:     MoveBall();
+     13: 
+     14:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void MoveBall() at C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp (68):
+
+     66:         txSetFillColor (TX_RED);
+     67: 
+=>   68:         txCircle (x2, y2, r2);
+     69: 
+     70:         x2 += vx2 * dt;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\zainu\Desktop\курс\TX\TXLib.h
+Compiled:	Jun  9 2021 18:06:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 09 2021 18:06:37
+
+Run file:	C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe
+Directory:	C:\Users\zainu\Desktop\курс\proekt2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe,
+
+ВНЕЗАПНО: Целочисленное деление на ноль.
+
+#1: Исключение EXCEPTION_INT_DIVIDE_BY_ZERO (0xC0000094) при выполнении кода по адресу 0x0042C2F0 в функции MoveBall() в файле C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp на строке 105. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400], Instance: 0x005062F4 (32-bit), Flags: CMdRe0, Thread: 0x2BBC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042C2F0 in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: MoveBall() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (105):
+
+    103:       		int Vn1 = vx2*s + vy2*e;
+    104:       		int Vn2 = vx1*s + vy1*e;
+=>  105:       		int dt = (r2+r1-d)/(Vn1-Vn2);
+    106:       		if (dt > 0.6) dt = 0.6;
+    107:       		if (dt < -0.6) dt = -0.6;
+
+# 1 0x0042BEFB in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: main() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (12):
+
+     10:     txCreateWindow (W, H);
+     11: 
+=>   12:     MoveBall();
+     13: 
+     14:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void MoveBall() at C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp (68):
+
+     66:         txSetFillColor (TX_RED);
+     67: 
+=>   68:         txCircle (x2, y2, r2);
+     69: 
+     70:         x2 += vx2 * dt;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\zainu\Desktop\курс\TX\TXLib.h
+Compiled:	Jun  9 2021 18:07:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 09 2021 18:07:28
+
+Run file:	C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe
+Directory:	C:\Users\zainu\Desktop\курс\proekt2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe,
+
+ВНЕЗАПНО: Целочисленное деление на ноль.
+
+#1: Исключение EXCEPTION_INT_DIVIDE_BY_ZERO (0xC0000094) при выполнении кода по адресу 0x0042C2F0 в функции MoveBall() в файле C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp на строке 105. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400], Instance: 0x005062F4 (32-bit), Flags: CMdRe0, Thread: 0x2BBC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042C2F0 in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: MoveBall() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (105):
+
+    103:       		int Vn1 = vx2*s + vy2*e;
+    104:       		int Vn2 = vx1*s + vy1*e;
+=>  105:       		int dt = (r2+r1-d)/(Vn1-Vn2);
+    106:       		if (dt > 0.6) dt = 0.6;
+    107:       		if (dt < -0.6) dt = -0.6;
+
+# 1 0x0042BEFB in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: main() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (12):
+
+     10:     txCreateWindow (W, H);
+     11: 
+=>   12:     MoveBall();
+     13: 
+     14:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void MoveBall() at C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp (68):
+
+     66:         txSetFillColor (TX_RED);
+     67: 
+=>   68:         txCircle (x2, y2, r2);
+     69: 
+     70:         x2 += vx2 * dt;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\zainu\Desktop\курс\TX\TXLib.h
+Compiled:	Jun  9 2021 18:07:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 09 2021 18:07:28
+
+Run file:	C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe
+Directory:	C:\Users\zainu\Desktop\курс\proekt2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe,
+
+ВНЕЗАПНО: Целочисленное деление на ноль.
+
+#1: Исключение EXCEPTION_INT_DIVIDE_BY_ZERO (0xC0000094) при выполнении кода по адресу 0x0042C2F0 в функции MoveBall() в файле C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp на строке 105. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400], Instance: 0x005062F4 (32-bit), Flags: CMdRe0, Thread: 0x2498 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042C2F0 in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: MoveBall() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (105):
+
+    103:       		int Vn1 = vx2*s + vy2*e;
+    104:       		int Vn2 = vx1*s + vy1*e;
+=>  105:       		int dt = (r2+r1-d)/(Vn1-Vn2);
+    106:       		if (dt > 0.6) dt = 0.6;
+    107:       		if (dt < -0.6) dt = -0.6;
+
+# 1 0x0042BEFB in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: main() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (12):
+
+     10:     txCreateWindow (W, H);
+     11: 
+=>   12:     MoveBall();
+     13: 
+     14:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void MoveBall() at C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp (68):
+
+     66:         txSetFillColor (TX_RED);
+     67: 
+=>   68:         txCircle (x2, y2, r2);
+     69: 
+     70:         x2 += vx2 * dt;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\zainu\Desktop\курс\TX\TXLib.h
+Compiled:	Jun  9 2021 18:07:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 09 2021 18:07:55
+
+Run file:	C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe
+Directory:	C:\Users\zainu\Desktop\курс\proekt2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe,
+
+ВНЕЗАПНО: Целочисленное деление на ноль.
+
+#1: Исключение EXCEPTION_INT_DIVIDE_BY_ZERO (0xC0000094) при выполнении кода по адресу 0x0042C2F0 в функции MoveBall() в файле C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp на строке 105. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400], Instance: 0x005062F4 (32-bit), Flags: CMdRe0, Thread: 0x2498 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042C2F0 in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: MoveBall() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (105):
+
+    103:       		int Vn1 = vx2*s + vy2*e;
+    104:       		int Vn2 = vx1*s + vy1*e;
+=>  105:       		int dt = (r2+r1-d)/(Vn1-Vn2);
+    106:       		if (dt > 0.6) dt = 0.6;
+    107:       		if (dt < -0.6) dt = -0.6;
+
+# 1 0x0042BEFB in C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe: main() at C:/Users/zainu/Desktop/курс/proekt2/Ozhaev Zaynudin Sharik4.cpp (12):
+
+     10:     txCreateWindow (W, H);
+     11: 
+=>   12:     MoveBall();
+     13: 
+     14:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void MoveBall() at C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.cpp (68):
+
+     66:         txSetFillColor (TX_RED);
+     67: 
+=>   68:         txCircle (x2, y2, r2);
+     69: 
+     70:         x2 += vx2 * dt;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 170, Date: 2021-03-20 16:46:48 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\zainu\Desktop\курс\TX\TXLib.h
+Compiled:	Jun  9 2021 18:07:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 09 2021 18:07:55
+
+Run file:	C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik4.exe
+Directory:	C:\Users\zainu\Desktop\курс\proekt2
+
+--------------------------------------------------
