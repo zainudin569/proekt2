@@ -33,8 +33,8 @@ void MoveBall()
 
         txCircle (x1, y1, r1);
 
-        //x1 += vx1 * dt;
-       // y1 += vy1 * dt;
+        x1 += vx1 * dt;
+        y1 += vy1 * dt;
 
         if (x1 > 800 - r1)
             {
@@ -65,8 +65,8 @@ void MoveBall()
 
         txCircle (x2, y2, r2);
 
-       // x2 += vx2 * dt;
-        //y2 += vy2 * dt;
+        x2 += vx2 * dt;
+        y2 += vy2 * dt;
 
         if (x2 > 800 - r2)
             {
