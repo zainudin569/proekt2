@@ -1,55 +1,30 @@
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:155:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-     float Dx = *x1 - *x2; // стороны треугольника
-                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:156:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-     float Dy = *y1 - *y2; // стороны треугольника
-                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:157:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
-     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-                                 ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:157:45: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-                                             ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:157:50: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
-     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-                                                  ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:163:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
-                          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:163:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
-                                     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:164:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
-                          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:164:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
-                                     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:165:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:156:5: error: expected ',' or ';' before 'int'
+     int n = 4
+     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:157:27: error: 'n' was not declared in this scope
+     for (nmax = 0; nmax < n; ++nmax)
                            ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:165:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
-                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:166:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
-                           ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:166:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
-                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:172:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vx1 = Vn2*sin - Vt2*cos; //обратный поворот системы координат шар1
-                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:173:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vy1 = Vn2*cos + Vt2*sin; //обратный поворот системы координат шар1
-                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:174:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vx2 = Vn1*sin - Vt1*cos; //обратный поворот системы координат шар2
-                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:175:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
-                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:157:36: error: expected ';' before ')' token
+     for (nmax = 0; nmax < n; ++nmax)
+                                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:191:1: error: expected '}' at end of input
+ }
+ ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: At global scope:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'x1' [-Wunused-parameter]
+ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'y1' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'x2' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'y2' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'vx1' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'vy1' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'vx2' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'vy2' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'r1' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'r2' [-Wunused-parameter]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:151:6: warning: unused parameter 'dt' [-Wunused-parameter]
 ---------------------------------------------------------------------------------------------
-[10.06.2021  1:11:28,56 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[10.06.2021  1:26:07,22 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
