@@ -91,12 +91,12 @@ void MoveBall()
              y2 = 0 + r2;
             }
 
-        if (txGetAsyncKeyState (VK_RIGHT)) vx++;
-        if (txGetAsyncKeyState (VK_LEFT))  vx--;
-        if (txGetAsyncKeyState (VK_UP))    vy--;
-        if (txGetAsyncKeyState (VK_DOWN))  vy++;
+        if (txGetAsyncKeyState (VK_RIGHT)) vx1++;
+        if (txGetAsyncKeyState (VK_LEFT))  vx1--;
+        if (txGetAsyncKeyState (VK_UP))    vy1--;
+        if (txGetAsyncKeyState (VK_DOWN))  vy1++;
 
-        if (txGetAsyncKeyState (VK_SPACE)) vy = vx = 0;
+        if (txGetAsyncKeyState (VK_SPACE)) vy1 = vx1 = 0;
 
         if (txGetAsyncKeyState (VK_F1))
             {
@@ -115,8 +115,8 @@ void MoveBall()
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            txSetColor     (RGB(x,   y,   150), 2);
-            txSetFillColor (RGB(x/2, y/2, 150));
+            txSetColor     (RGB(x1,   y1,   150), 2);
+            txSetFillColor (RGB(x1/2, y1/2, 150));
             }
         txSleep (1);
         }
