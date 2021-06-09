@@ -7,7 +7,7 @@ void DrowBall(int x, int y, int vx, int vy,int r, COLORREF Color, COLORREF FillC
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
 void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
                   int* vx1, int* vy1, int* vx2, int* vy2,
-                  int*  r1, int* r2);
+                  int*  r1, int* r2, dt);
 void ControlBall(int x, int y, int* vx, int* vy);
 
 //---------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ void MoveBall()
 
         Physics2Ball( &x1,  &y1,  &x2,  &y2,
                      &vx1, &vy1, &vx2, &vy2,
-                      &r1, &r2);
+                      &r1, &r2, dt);
 
         ControlBall(x1, y1, &vx1, &vy1);
 
@@ -150,7 +150,7 @@ void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
 
 void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
                   int* vx1, int* vy1, int* vx2, int* vy2,
-                  int*  r1, int* r2)
+                  int*  r1, int* r2, dt)
     {
     float Dx = x1 - x2; // стороны треугольника
     float Dy = y1 - y2; // стороны треугольника
