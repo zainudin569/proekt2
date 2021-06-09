@@ -178,4 +178,5 @@ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
         *y1 = *y1 + vy1*dt;
         *x2 = *x2 + vx2*dt;
         *y2 = *y2 + vy2*dt;
+        }
     }
