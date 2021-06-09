@@ -1,6 +1,6 @@
 
 #include "TXLib.h"
-const int W = 800;
+const int W = 1200;
 const int H = 600;
 
 void MoveBall();
