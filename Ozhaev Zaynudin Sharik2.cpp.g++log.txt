@@ -1,13 +1,4 @@
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.cpp:58:14: error: 'vy' was not declared in this scope
-              vy = -vy;
-              ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.cpp:59:14: error: 'y' was not declared in this scope
-              y = 0 + r;
-              ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.cpp:59:22: error: 'r' was not declared in this scope
-              y = 0 + r;
-                      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.cpp:94:44: error: 'vx' was not declared in this scope
          if (txGetAsyncKeyState (VK_RIGHT)) vx++;
                                             ^
@@ -35,5 +26,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.cpp:118:38: error: '
              txSetColor     (RGB(x,   y,   150), 2);
                                       ^
 ---------------------------------------------------------------------------------------------
-[09.06.2021 17:23:39,03 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[09.06.2021 17:23:52,27 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik2.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
