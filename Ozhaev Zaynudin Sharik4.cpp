@@ -24,6 +24,7 @@ void MoveBall()
     float vy1 = rand() % 10;
     float vx2 = rand() % 10;
     float vy2 = rand() % 10;
+    float dt = 1;
 
     txSetColor (TX_LIGHTGREEN, 2);
     txSetFillColor (TX_GREEN);
