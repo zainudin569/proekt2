@@ -154,9 +154,9 @@ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
     {
     int nmax = 100;
     int n = 4;
-    for (nmax = 0; nmax < n; ++nmax);
+    for (nmax = 0; nmax < n; ++nmax)
         {
-        for (n = nmax + 1; nmax < n; ++n);
+        for (n = nmax + 1; nmax < n; ++n)
             {
             float Dx = *x1 - *x2; // стороны треугольника
             float Dy = *y1 - *y2; // стороны треугольника
