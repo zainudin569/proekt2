@@ -120,7 +120,7 @@ void MoveBall()
       		int Vt2 = -vx1*e+vy1*s;
 
 
-      		int o = Vn2;
+      		float o = Vn2;
       		Vn2 = Vn1;
       		Vn1 = o;
 
