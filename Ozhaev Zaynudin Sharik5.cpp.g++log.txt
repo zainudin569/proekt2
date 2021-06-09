@@ -27,11 +27,8 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:31:42: warning: 
           vx2 = rand() % 10, vy2 = rand() % 10,
                                           ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:32:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-           r2 = 15 + rand() % 35,;
+           r2 = 15 + rand() % 35;
                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:32:33: error: expected unqualified-id before ';' token
-           r2 = 15 + rand() % 35,;
-                                 ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:34:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float x3 = rand() % W,   y3 = rand() % H,
                        ^
@@ -45,11 +42,8 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:35:42: warning: 
           vx3 = rand() % 10, vy3 = rand() % 10,
                                           ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:36:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-           r3 = 15 + rand() % 35,;
+           r3 = 15 + rand() % 35;
                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:36:33: error: expected unqualified-id before ';' token
-           r3 = 15 + rand() % 35,;
-                                 ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:38:23: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float x4 = rand() % W,   y4 = rand() % H,
                        ^
@@ -63,11 +57,8 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:39:42: warning: 
           vx4 = rand() % 10, vy4 = rand() % 10,
                                           ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:40:19: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-           r4 = 15 + rand() % 35,;
+           r4 = 15 + rand() % 35;
                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:40:33: error: expected unqualified-id before ';' token
-           r4 = 15 + rand() % 35,;
-                                 ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:49:63: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
          DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTBLUE , TX_BLUE );
                                                                ^
@@ -114,5 +105,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:59:39: warning: 
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:59:39: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:59:39: error: cannot convert 'float*' to 'int*' for argument '3' to 'void ControlBall(int, int, int*, int*)'
 ---------------------------------------------------------------------------------------------
-[10.06.2021  0:11:53,89 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[10.06.2021  0:12:10,03 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

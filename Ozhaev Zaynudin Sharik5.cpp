@@ -29,15 +29,15 @@ void MoveBall()
 
     float x2 = rand() % W,   y2 = rand() % H,
          vx2 = rand() % 10, vy2 = rand() % 10,
-          r2 = 15 + rand() % 35,;
+          r2 = 15 + rand() % 35;
 
     float x3 = rand() % W,   y3 = rand() % H,
          vx3 = rand() % 10, vy3 = rand() % 10,
-          r3 = 15 + rand() % 35,;
+          r3 = 15 + rand() % 35;
 
     float x4 = rand() % W,   y4 = rand() % H,
          vx4 = rand() % 10, vy4 = rand() % 10,
-          r4 = 15 + rand() % 35,;
+          r4 = 15 + rand() % 35;
 
     int dt = 1;
 
