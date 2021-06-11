@@ -23,12 +23,25 @@ int main()
 
 //---------------------------------------------------------------------------------
 
+struct Ball
+    {
+    int  x, y , vx, vy;
+
+    int r;
+
+    COLORREF Color, COLORREF FillColor;
+    }
+
+//---------------------------------------------------------------------------------
+
 void MoveBall()
     {
     srand(time(NULL));
-      int  x1 = rand() % W,   y1 = rand() % H,
-          vx1 = rand() % 10, vy1 = rand() % 10,
-           r1 = 15 + rand() % 35;
+
+    Ball bal1 = { rand() % W,  rand() % H,
+                  rand() % 10, rand() % 10,
+                  15 + rand() % 35,
+                  TX_LIGHTBLUE, TX_BLUE };
 
       int x2 = rand() % W,   y2 = rand() % H,
          vx2 = rand() % 10, vy2 = rand() % 10,
@@ -49,7 +62,7 @@ void MoveBall()
         txSetFillColor (TX_BLACK);
         txClear ();
 
-        DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTBLUE , TX_BLUE );
+        DrowBall(ball1);
         DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
         DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
         DrowBall(x4, y4, vx4, vy4, r4, TX_PINK      , TX_BROWN);
