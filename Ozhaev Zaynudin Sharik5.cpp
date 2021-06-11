@@ -40,15 +40,15 @@ void MoveBall()
     {
     srand(time(NULL));
 
-    Ball ball1 = { rand() % W,  rand() % H,
+    Ball ball1 = { 255,  300,
                  1 + rand() % 9, 1 + rand() % 9,
-                 15 + rand() % 35,
+                 15,
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
-    Ball ball2 = { rand() % W,  rand() % H,
+    Ball ball2 = { 255,  300,
                  1 + rand() % 9, 1 + rand() % 9,
-                 15 + rand() % 35,
+                 15,
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
