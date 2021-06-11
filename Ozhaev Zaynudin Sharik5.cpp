@@ -234,13 +234,13 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         {
         float Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         float Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
-        /*
+
         float vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
         if (vt > 0.6) vt = 0.6;
         if (vt < -0.6) vt = -0.6;
 
-        printf ("Coordin do(): d  = %d, r1  = %d, r2= %d, vt  = %d\n", d, (*ball_1) .r, (*ball_2) .r, vt);
+        printf ("Coordin do(): r1  = %d, r2= %d, vt  = %d\n", (*ball_1) .r, (*ball_2) .r, vt);
         printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
 
@@ -261,7 +261,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         cos = Dy/d; // cos
         Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
-        */
+
         float Vt1 = -(*ball_2) .vx*cos + (*ball_2) .vy*sin; //поворот системы координат шар1
         float Vt2 = -(*ball_1) .vx*cos + (*ball_1) .vy*sin; //поворот системы координат шар2
 
