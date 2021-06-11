@@ -240,7 +240,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
 
-        float Vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
+        double Vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
         if (Vt > 0.6) Vt = 0.6;
         if (Vt < -0.6) Vt = -0.6;
