@@ -29,7 +29,8 @@ struct Ball
 
     int r;
 
-    COLORREF Color, COLORREF FillColor;
+    COLORREF Color;
+    COLORREF FillColor;
     }
 
 //---------------------------------------------------------------------------------
