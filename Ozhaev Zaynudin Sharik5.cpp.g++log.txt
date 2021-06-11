@@ -1,23 +1,4 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:5:1: error: 'truct' does not name a type
- truct Ball
- ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:16:15: error: variable or field 'DrowBall' declared void
- void DrowBall(Ball ball);
-               ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:16:15: error: 'Ball' was not declared in this scope
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void MoveBall()':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:55:5: error: 'Ball' was not declared in this scope
-     Ball ball1 = { rand() % W,  rand() % H,
-     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:55:10: error: expected ';' before 'ball1'
-     Ball ball1 = { rand() % W,  rand() % H,
-          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:84:18: error: 'ball1' was not declared in this scope
-         DrowBall(ball1);
-                  ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:84:23: error: 'DrowBall' was not declared in this scope
-         DrowBall(ball1);
-                       ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:93:22: error: 'x1' was not declared in this scope
          PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
                       ^
@@ -30,11 +11,28 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:93:38: error: 'v
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:93:47: error: 'r1' was not declared in this scope
          PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
                                                ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: At global scope:
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:116:15: error: variable or field 'DrowBall' declared void
- void DrowBall(Ball ball)
+In file included from c:\users\zainu\desktop\курс\codeblocks\mingw\include\txlib.h:1:0,
+                 from C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:1:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void DrowBall(Ball)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:118:17: error: 'Color' was not declared in this scope
+     txSetColor (Color, 2);
+                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:119:21: error: 'FillColor' was not declared in this scope
+     txSetFillColor (FillColor);
+                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:121:15: error: 'x' was not declared in this scope
+     txCircle (x, y, r);
                ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:116:15: error: 'Ball' was not declared in this scope
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:121:18: error: 'y' was not declared in this scope
+     txCircle (x, y, r);
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:121:21: error: 'r' was not declared in this scope
+     txCircle (x, y, r);
+                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: At global scope:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:116:6: warning: unused parameter 'ball' [-Wunused-parameter]
+ void DrowBall(Ball ball)
+      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void PhysicsBall(int*, int*, int*, int*, int, int)':
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:168:13: error: invalid conversion from 'int' to 'int*' [-fpermissive]
           vx =   - *vx;
@@ -92,5 +90,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:249:24: warning:
          *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
                         ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021  9:55:31,05 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[11.06.2021  9:55:40,45 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

@@ -2,7 +2,7 @@
 const int W = 1100;
 const int H = 720;
 
-truct Ball
+struct Ball
     {
     int  x, y , vx, vy;
 
