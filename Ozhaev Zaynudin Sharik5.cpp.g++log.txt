@@ -1,9 +1,7 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:6:19: error: variable or field 'DrowBall' declared void
- void DrowBall(Ball);
-                   ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:6:15: error: 'Ball' was not declared in this scope
- void DrowBall(Ball);
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:6:15: error: variable or field 'DrowBall' declared void
+ void DrowBall(Ball ball);
                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:6:15: error: 'Ball' was not declared in this scope
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void MoveBall()':
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:74:23: error: 'DrowBall' was not declared in this scope
          DrowBall(ball1);
@@ -22,7 +20,7 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:83:47: error: 'r
                                                ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void DrowBall(Ball)':
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:106:6: warning: no previous declaration for 'void DrowBall(Ball)' [-Wmissing-declarations]
- void DrowBall(Ball ball1)
+ void DrowBall(Ball ball)
       ^
 In file included from c:\users\zainu\desktop\курс\codeblocks\mingw\include\txlib.h:1:0,
                  from C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:1:
@@ -42,8 +40,8 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:111:21: error: '
      txCircle (x, y, r);
                      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: At global scope:
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:106:6: warning: unused parameter 'ball1' [-Wunused-parameter]
- void DrowBall(Ball ball1)
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:106:6: warning: unused parameter 'ball' [-Wunused-parameter]
+ void DrowBall(Ball ball)
       ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void PhysicsBall(int*, int*, int*, int*, int, int)':
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:158:13: error: invalid conversion from 'int' to 'int*' [-fpermissive]
@@ -102,5 +100,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:239:24: warning:
          *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
                         ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021  9:49:31,68 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[11.06.2021  9:54:42,17 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
