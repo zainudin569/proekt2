@@ -271,8 +271,6 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         double Vt1 = -(*ball_2) .vx*cos + (*ball_2) .vy*sin; //поворот системы координат шар1
         double Vt2 = -(*ball_1) .vx*cos + (*ball_1) .vy*sin; //поворот системы координат шар2
 
-        //printf ("Coordin pos(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
-
         double o = Vn2; //меняем местами vn1 и vn2
         Vn2 = Vn1;
         Vn1 = o;
@@ -286,7 +284,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         (*ball_1) .y = (*ball_1) .y + (*ball_1) .vy*dt;
         (*ball_2) .x = (*ball_2) .x + (*ball_2) .vx*dt;
         (*ball_2) .y = (*ball_2) .y + (*ball_2) .vy*dt;
-        txSleep (5000);
+        //txSleep (5000);
         }
 
 }
