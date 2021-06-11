@@ -138,8 +138,8 @@ void ControlBall(Ball* ball)
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            (*ball) .Color     = RGB(*ball .x,   *ball .y,   150);
-            (*ball) .FillColor = RGB(*ball .x/2, *ball .y/2, 150);
+            (*ball) .Color     = RGB((*ball) .x,   (*ball) .y,   150);
+            (*ball) .FillColor = RGB((*ball) .x/2, (*ball) .y/2, 150);
             }
         }
 
