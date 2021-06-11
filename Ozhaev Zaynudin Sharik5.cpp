@@ -238,8 +238,8 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
 
         double dt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
-        if (dt > 0.6) dt = 0.6;
-        if (dt < -0.6) dt = -0.6;
+        if (dt > 1) dt = 1;
+        if (dt < -1) dt = -1;
 
         (*ball_1) .x = ROUND((*ball_1) .x - (*ball_1) .vx*dt);
         (*ball_1) .y = ROUND((*ball_1) .y - (*ball_1) .vy*dt);
@@ -247,10 +247,6 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         (*ball_2) .y = ROUND((*ball_2) .y - (*ball_2) .vy*dt);
 
         printf ("Coordin pos():  dt  = %f\n", dt);
-        printf ("Coordin (): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
-        printf ("Coordin (): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
-
-        //txSleep (5000);
 
         Dx = (*ball_1) .x - (*ball_2) .x;
         Dy = (*ball_1) .y - (*ball_2) .y;
