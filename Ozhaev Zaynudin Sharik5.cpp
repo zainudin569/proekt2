@@ -56,12 +56,12 @@ void MoveBall()
                   rand() % 10, rand() % 10,
                   15 + rand() % 35,
                   TX_LIGHTBLUE, TX_BLUE };
+    Ball ball2 = { rand() % W,  rand() % H,
+                  rand() % 10, rand() % 10,
+                  15 + rand() % 35,
+                  TX_LIGHTRED, TX_RED };
 
 
-      /*int x1 = rand() % W,   y1 = rand() % H,
-         vx1 = rand() % 10, vy1 = rand() % 10,
-          r1 = 15 + rand() % 35;
-       */
       int x2 = rand() % W,   y2 = rand() % H,
          vx2 = rand() % 10, vy2 = rand() % 10,
           r2 = 15 + rand() % 35;
@@ -82,8 +82,8 @@ void MoveBall()
         txClear ();
 
         DrowBall(ball1);
-        //DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTRED  , TX_RED  );
-        //DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
+        DrowBall(ball2);
+
         //DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
         //DrowBall(x4, y4, vx4, vy4, r4, TX_PINK      , TX_BROWN);
 
@@ -163,31 +163,31 @@ void PhysicsBall(Ball *ball, int dt)
     (*ball) .x += (*ball) .vx * dt;
     (*ball) .y += (*ball) .vy * dt;
 
-    if ((*ball) .x > W - (*ball) .r)
+    if ((*ball) .x  > W - (*ball) .r)
         {
-         (*ball) .vx =   - (*ball) .vx;
-         (*ball) .x = W - (*ball) .r;
+        (*ball) .vx =   - (*ball) .vx;
+        (*ball) .x  = W - (*ball) .r;
         return;
         }
 
-    if ((*ball) .y > H - (*ball) .r)
+    if ((*ball) .y  > H - (*ball) .r)
         {
         (*ball) .vy =   - (*ball) .vy;
-         (*ball) .y = H - (*ball) .r;
+        (*ball) .y  = H - (*ball) .r;
         return;
         }
 
-    if ((*ball) .x <   0 + (*ball) .r)
+    if ((*ball) .x <  0 + (*ball) .r)
         {
-        (*ball) .vx = - (*ball) .vx;
-         (*ball) .x = 0 + (*ball) .r;
+        (*ball) .vx =   - (*ball) .vx;
+        (*ball) .x  = 0 + (*ball) .r;
         return;
         }
 
     if ((*ball) .y <   0 + (*ball) .r)
         {
-        (*ball) .vy = - (*ball) .vy;
-         (*ball) .y = 0 + (*ball) .r;
+        (*ball) .vy =   - (*ball) .vy;
+        (*ball) .y  = 0 + (*ball) .r;
         return;
         }
     }
