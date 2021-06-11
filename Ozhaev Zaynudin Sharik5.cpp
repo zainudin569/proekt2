@@ -12,13 +12,15 @@ struct Ball
     COLORREF FillColor;
     };
 
+//---------------------------------------------------------------------------------
+
 void MoveBall();
 void DrowBall(Ball ball);
-void PhysicsBall(Ball *ball, int dt);
+void PhysicsBall(Ball* ball, int dt);
 void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
                   int* vx1, int* vy1, int* vx2, int* vy2,
                   int*  r1, int* r2, int dt);
-void ControlBall(int x, int y, int* vx, int* vy);
+void ControlBall(Ball* ball);
 
 //void bilo_stolknov (double xA, double yA, double xB, double yB, double rA, double rB)
 //double Distansce (double x1, double y1, double x2, double y2);
@@ -34,18 +36,6 @@ int main()
     return 0;
     }
 
-//---------------------------------------------------------------------------------
-
-/*struct Ball
-    {
-    int  x, y , vx, vy;
-
-    int r;
-
-    COLORREF Color;
-    COLORREF FillColor;
-    };
-*/
 //---------------------------------------------------------------------------------
 
 void MoveBall()
@@ -71,9 +61,6 @@ void MoveBall()
                   rand() % 10, rand() % 10,
                   15 + rand() % 35,
                   TX_PINK , TX_BROWN };
-
-
-
 
     int dt = 1;
 
@@ -113,7 +100,7 @@ void MoveBall()
 
 //---------------------------------------------------------------------------------
 
-void DrowBall(Ball ball)
+void DrowBall(Ball* ball)
     {
     txSetColor ((ball .Color), 2);
     txSetFillColor (ball .FillColor);
@@ -125,40 +112,40 @@ void DrowBall(Ball ball)
 
 //---------------------------------------------------------------------------------
 
-void ControlBall(int x, int y, int* vx, int* vy)
+void ControlBall(Ball *ball))
         {
-        if (txGetAsyncKeyState (VK_RIGHT)) ++*vx;
-        if (txGetAsyncKeyState (VK_LEFT))  --*vx;
-        if (txGetAsyncKeyState (VK_UP))    --*vy;
-        if (txGetAsyncKeyState (VK_DOWN))  ++*vy;
+        if (txGetAsyncKeyState (VK_RIGHT)) ++(*ball1) .vx;
+        if (txGetAsyncKeyState (VK_LEFT))  --(*ball1) .vx;
+        if (txGetAsyncKeyState (VK_UP))    --(*ball1) .vy;
+        if (txGetAsyncKeyState (VK_DOWN))  ++(*ball1) .vy;
 
-        if (txGetAsyncKeyState (VK_SPACE)) *vy = *vx = 0;
+        if (txGetAsyncKeyState (VK_SPACE)) (*ball1) .vy = (*ball1) .vx = 0;
 
         if (txGetAsyncKeyState (VK_F1))
             {
-            txSetColor (TX_LIGHTRED, 2);
-            txSetFillColor (TX_RED);
+            *ball .Color = TX_LIGHTRED;
+            *ball .SetFillColor = TX_RED;
             }
         if (txGetAsyncKeyState (VK_F2))
             {
-            txSetColor (TX_LIGHTBLUE, 2);
-            txSetFillColor (TX_BLUE);
+            *ball .Color = TX_LIGHTBLUE;
+            *ball .FillColor = TX_BLUE;
             }
         if (txGetAsyncKeyState (VK_F3))
             {
-            txSetColor (TX_LIGHTGREEN, 2);
-            txSetFillColor (TX_GREEN);
+            *ball .Color = TX_LIGHTGREEN);
+            *ball .FillColor = TX_GREEN;
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            txSetColor     (RGB(x,   y,   150), 2);
-            txSetFillColor (RGB(x/2, y/2, 150));
+            *ball .Color     = RGB(*ball .x,   *ball .y,   150);
+            *ball .FillColor = RGB(*ball .x/2, *ball .y/2, 150);
             }
         }
 
 //---------------------------------------------------------------------------------
 
-void PhysicsBall(Ball *ball, int dt)
+void PhysicsBall(Ball* ball, int dt)
     {
     (*ball) .x += (*ball) .vx * dt;
     (*ball) .y += (*ball) .vy * dt;
