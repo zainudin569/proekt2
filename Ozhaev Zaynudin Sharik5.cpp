@@ -90,7 +90,7 @@ void MoveBall()
         printf ("In CraziBall(): x  = %d and y  = %d\n", x2, y2);
         printf ("In CraziBall(): vx = %d and vy = %d\n", vx2, vy2);
 
-        PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
+        //PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
         PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
         PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
