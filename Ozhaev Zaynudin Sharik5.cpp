@@ -48,7 +48,7 @@ void MoveBall()
 
     Ball ball2 = { 255,  300,
                  1 + rand() % 9, 1 + rand() % 9,
-                 15,
+                 10,
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
@@ -226,6 +226,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
     int Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
     int Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
     double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+    printf ("Coordin do():  d  = %f\n", d);
     double sin = Dx/d; // sin угла треугольника
     double cos = Dy/d; // cos угла треугольника
 
