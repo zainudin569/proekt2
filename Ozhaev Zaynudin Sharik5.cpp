@@ -249,6 +249,9 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
 
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
+
+        txSleep (2000);
+
         Dx = (*ball_1) .x - (*ball_2) .x;
         Dy = (*ball_1) .y - (*ball_2) .y;
         d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
