@@ -81,8 +81,10 @@ void MoveBall()
         PhysicsBall(&ball4, dt);
 
 
-        CollisionBall(&ball1,&ball2, dt);
-
+        CollisionBall(&ball1, &ball2, dt);
+        /*Physics2Ball( &x1,  &y1,  &x2,  &y2,
+                     &vx1, &vy1, &vx2, &vy2,
+                      &r1, &r2, dt);*/
         /*int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
         if (bilo_li_ono)
             {
