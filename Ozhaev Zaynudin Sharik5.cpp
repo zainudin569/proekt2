@@ -39,9 +39,10 @@ int main()
 void MoveBall()
     {
     srand(time(NULL));
+    int ball [];
     for ( int x = 0; x < 4; x++ )
         {
-        Ball ball(x) = { rand() % W,  rand() % H,
+        Ball ball[x] = { rand() % W,  rand() % H,
                         1 + rand() % 9, 1 + rand() % 9,
                         15 + rand() % 35,
                         RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
