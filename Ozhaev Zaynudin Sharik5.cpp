@@ -10,6 +10,8 @@ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
                   int*  r1, int* r2, int dt);
 void ControlBall(int x, int y, int* vx, int* vy);
 
+//double Distansce (double x1, double y1, double x2, double y2);
+
 //---------------------------------------------------------------------------------
 
 int main()
@@ -39,10 +41,15 @@ void MoveBall()
     {
     srand(time(NULL));
 
-    Ball bal1 = { rand() % W,  rand() % H,
+    /*Ball bal1 = { rand() % W,  rand() % H,
                   rand() % 10, rand() % 10,
                   15 + rand() % 35,
                   TX_LIGHTBLUE, TX_BLUE };
+      */
+
+      int x1 = rand() % W,   y1 = rand() % H,
+         vx1 = rand() % 10, vy1 = rand() % 10,
+          r1 = 15 + rand() % 35;
 
       int x2 = rand() % W,   y2 = rand() % H,
          vx2 = rand() % 10, vy2 = rand() % 10,
@@ -63,10 +70,14 @@ void MoveBall()
         txSetFillColor (TX_BLACK);
         txClear ();
 
-        DrowBall(ball1);
+        //DrowBall(ball1);
+        DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTRED  , TX_RED  );
         DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
         DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
         DrowBall(x4, y4, vx4, vy4, r4, TX_PINK      , TX_BROWN);
+
+        prinf ("In CraziBall(): x  = %d and y  = %d\n", x2, y2);
+        prinf ("In CraziBall(): vx = %d and vy = %d\n", vx2, vy2);
 
         PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
@@ -76,6 +87,12 @@ void MoveBall()
         Physics2Ball( &x1,  &y1,  &x2,  &y2,
                      &vx1, &vy1, &vx2, &vy2,
                       &r1, &r2, dt);
+        int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
+        if (bilo_li_ono)
+            {
+            Bam_balls (x1, y1, &vx1, &vy1, x2, y2, &vx2, &vy2);
+            }
+        //Ball_Control (&vx1, &vy1);
 
         ControlBall(x1, y1, &vx1, &vy1);
 
