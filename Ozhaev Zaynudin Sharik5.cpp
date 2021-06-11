@@ -86,10 +86,10 @@ void MoveBall()
 
 
         CollisionBall(&ball1, &ball2, dt);
-        //CollisionBall(&ball1, &ball3, dt);
-        //CollisionBall(&ball1, &ball4, dt);
+        CollisionBall(&ball1, &ball3, dt);
+        CollisionBall(&ball1, &ball4, dt);
 
-        /*CollisionBall(&ball2, &ball1, dt);
+        CollisionBall(&ball2, &ball1, dt);
         CollisionBall(&ball2, &ball3, dt);
         CollisionBall(&ball2, &ball4, dt);
 
@@ -100,7 +100,7 @@ void MoveBall()
         CollisionBall(&ball4, &ball1, dt);
         CollisionBall(&ball4, &ball2, dt);
         CollisionBall(&ball4, &ball3, dt);
-        */
+
         /*int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
         if (bilo_li_ono)
             {
@@ -239,7 +239,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
-
+        /*
         double Vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
         if (Vt > 0.6) Vt = 0.6;
@@ -267,7 +267,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         cos = Dy/d; // cos
         Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
-
+        */
         double Vt1 = -(*ball_2) .vx*cos + (*ball_2) .vy*sin; //поворот системы координат шар1
         double Vt2 = -(*ball_1) .vx*cos + (*ball_1) .vy*sin; //поворот системы координат шар2
 
