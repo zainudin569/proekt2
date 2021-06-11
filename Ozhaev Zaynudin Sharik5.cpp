@@ -88,9 +88,18 @@ void MoveBall()
         CollisionBall(&ball1, &ball2, dt);
         CollisionBall(&ball1, &ball3, dt);
         CollisionBall(&ball1, &ball4, dt);
+
         CollisionBall(&ball2, &ball1, dt);
         CollisionBall(&ball2, &ball3, dt);
         CollisionBall(&ball2, &ball4, dt);
+
+        CollisionBall(&ball3, &ball1, dt);
+        CollisionBall(&ball3, &ball2, dt);
+        CollisionBall(&ball3, &ball4, dt);
+
+        CollisionBall(&ball4, &ball1, dt);
+        CollisionBall(&ball4, &ball2, dt);
+        CollisionBall(&ball4, &ball3, dt);
 
         /*int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
         if (bilo_li_ono)
