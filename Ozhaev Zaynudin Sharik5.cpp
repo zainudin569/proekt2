@@ -115,10 +115,10 @@ void MoveBall()
 
 void DrowBall(Ball ball)
     {
-    txSetColor (Color, 2);
-    txSetFillColor (FillColor);
+    txSetColor (ball1 .Color, 2);
+    txSetFillColor (ball1 .FillColor);
 
-    txCircle (x, y, r);
+    txCircle (ball1 .x, ball1 .y, ball1 .r);
     //txLine (x, y, x + vx*5, y + vy*5);
     //txCircle (x + vx*5, y + vy*5, 3);
     }
