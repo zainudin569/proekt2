@@ -14,7 +14,7 @@ struct Ball
 
 void MoveBall();
 void DrowBall(Ball ball);
-void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
+void PhysicsBall(Ball *ball, int dt);
 void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
                   int* vx1, int* vy1, int* vx2, int* vy2,
                   int*  r1, int* r2, int dt);
@@ -90,10 +90,10 @@ void MoveBall()
         printf ("In CraziBall(): x  = %d and y  = %d\n", x2, y2);
         printf ("In CraziBall(): vx = %d and vy = %d\n", vx2, vy2);
 
-        //PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
-        PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
-        PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
-        PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
+        PhysicsBall(&ball1, dt,);
+        //PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
+        //PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
+        //PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
 
         /*Physics2Ball( &x1,  &y1,  &x2,  &y2,
                      &vx1, &vy1, &vx2, &vy2,
@@ -158,36 +158,36 @@ void ControlBall(int x, int y, int* vx, int* vy)
 
 //---------------------------------------------------------------------------------
 
-void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r)
+void PhysicsBall(Ball *ball, int dt)
     {
-    *x += *vx * dt;
-    *y += *vy * dt;
+    (*ball) .x += (*ball) .vx * dt;
+    (*ball) .y += (*ball) .vy * dt;
 
-    if (*x > W - r)
+    if ((*ball) .x > W - ball .r)
         {
-         vx =   - *vx;
-         *x = W - r;
+         (*ball) .vx =   - (*ball) .vx;
+         (*ball) .x = W - ball .r;
         return;
         }
 
-    if (*y > H - r)
+    if ((*ball) .y > H - ball .r)
         {
-        *vy =   - *vy;
-         *y = H - r;
+        (*ball) .vy =   - (*ball) .vy;
+         (*ball) .y = H - ball .r;
         return;
         }
 
-    if (*x <   0 + r)
+    if ((*ball) .x <   0 + ball .r)
         {
-        *vx = - *vx;
-         *x = 0 + r;
+        (*ball) .vx = - (*ball) .vx;
+         (*ball) .x = 0 + ball .r;
         return;
         }
 
-    if (*y <   0 + r)
+    if ((*ball) .y <   0 + ball .r)
         {
-        *vy = - *vy;
-         *y = 0 + r;
+        (*ball) .vy = - (*ball) .vy;
+         (*ball) .y = 0 + ball .r;
         return;
         }
     }

@@ -1,7 +1,65 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void PhysicsBall(int*, int*, int*, int*, int, int)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:168:13: error: invalid conversion from 'int' to 'int*' [-fpermissive]
-          vx =   - *vx;
-             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void MoveBall()':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:93:32: error: expected primary-expression before ')' token
+         PhysicsBall(&ball1, dt,);
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:67:11: warning: unused variable 'r2' [-Wunused-variable]
+           r2 = 15 + rand() % 35;
+           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:69:11: warning: unused variable 'x3' [-Wunused-variable]
+       int x3 = rand() % W,   y3 = rand() % H,
+           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:69:30: warning: unused variable 'y3' [-Wunused-variable]
+       int x3 = rand() % W,   y3 = rand() % H,
+                              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:70:10: warning: unused variable 'vx3' [-Wunused-variable]
+          vx3 = rand() % 10, vy3 = rand() % 10,
+          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:70:29: warning: unused variable 'vy3' [-Wunused-variable]
+          vx3 = rand() % 10, vy3 = rand() % 10,
+                             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:71:11: warning: unused variable 'r3' [-Wunused-variable]
+           r3 = 15 + rand() % 35;
+           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:73:11: warning: unused variable 'x4' [-Wunused-variable]
+       int x4 = rand() % W,   y4 = rand() % H,
+           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:73:30: warning: unused variable 'y4' [-Wunused-variable]
+       int x4 = rand() % W,   y4 = rand() % H,
+                              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:74:10: warning: unused variable 'vx4' [-Wunused-variable]
+          vx4 = rand() % 10, vy4 = rand() % 10,
+          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:74:29: warning: unused variable 'vy4' [-Wunused-variable]
+          vx4 = rand() % 10, vy4 = rand() % 10,
+                             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:75:11: warning: unused variable 'r4' [-Wunused-variable]
+           r4 = 15 + rand() % 35;
+           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void PhysicsBall(Ball*, int)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:166:32: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+     if ((*ball) .x > W - ball .r)
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:169:33: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+          (*ball) .x = W - ball .r;
+                                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:173:32: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+     if ((*ball) .y > H - ball .r)
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:176:33: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+          (*ball) .y = H - ball .r;
+                                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:180:34: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+     if ((*ball) .x <   0 + ball .r)
+                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:183:33: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+          (*ball) .x = 0 + ball .r;
+                                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:187:34: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+     if ((*ball) .y <   0 + ball .r)
+                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:190:33: error: request for member 'r' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+          (*ball) .y = 0 + ball .r;
+                                 ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int)':
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:229:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float Dx = *x1 - *x2; // стороны треугольника
@@ -55,5 +113,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:249:24: warning:
          *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
                         ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021 10:03:15,77 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[11.06.2021 10:11:36,05 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
