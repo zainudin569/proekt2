@@ -1,64 +1,121 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:20:38: error: redefinition of 'Ball* ball'
- void CollisionBall(Ball* ball, Ball* ball, int dt);
-                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:20:26: error: 'Ball* ball' previously declared here
- void CollisionBall(Ball* ball, Ball* ball, int dt);
-                          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:206:6: warning: no previous declaration for 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int)' [-Wmissing-declarations]
- void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
-      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:210:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-     float Dx = *x1 - *x2; // стороны треугольника
-                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:211:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-     float Dy = *y1 - *y2; // стороны треугольника
-                    ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:212:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void CollisionBall(Ball*, Ball*, int)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:210:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                  ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:212:45: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:210:45: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                              ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:212:50: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:210:50: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                                   ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
-                          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
-                                     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:219:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
-                          ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:219:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
-                                     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:220:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
-                           ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:220:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
-                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:221:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
-                           ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:221:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
-                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vx1 = Vn2*sin - Vt2*cos; //обратный поворот системы координат шар1
-                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vy1 = Vn2*cos + Vt2*sin; //обратный поворот системы координат шар1
-                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:229:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vx2 = Vn1*sin - Vt1*cos; //обратный поворот системы координат шар2
-                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:230:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
-         *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
-                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:214:22: error: request for member 'r' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+     if (d < *ball_1 .r + *ball_2 .r) //проверка столкновения
+                      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:214:35: error: request for member 'r' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+     if (d < *ball_1 .r + *ball_2 .r) //проверка столкновения
+                                   ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:216:23: error: invalid cast from type 'Ball' to type 'float'
+         float (*ball_1) .Vn = *ball_2 .vx*sin + *ball_2 .vy*cos; //поворот системы координат шар1
+                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:216:40: error: request for member 'vx' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         float (*ball_1) .Vn = *ball_2 .vx*sin + *ball_2 .vy*cos; //поворот системы координат шар1
+                                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:216:58: error: request for member 'vy' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         float (*ball_1) .Vn = *ball_2 .vx*sin + *ball_2 .vy*cos; //поворот системы координат шар1
+                                                          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:217:23: error: expected initializer before '.' token
+         float *ball_2 .Vn = *ball_1 .vx*sin + *ball_1 .vy1*cos; //поворот системы координат шар2
+                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:23: error: expected initializer before '.' token
+         float *ball_1 .Vt = -(*ball_2 .vx)*cos + *ball_2 .vy*sin; //поворот системы координат шар1
+                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:219:23: error: expected initializer before '.' token
+         float *ball_2 .Vt = -(*ball_1 .vx)*cos + *ball_1 .vy*sin; //поворот системы координат шар2
+                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:221:28: error: request for member 'Vn' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         float o = *ball_2 .Vn; //меняем местами vn1 и vn2
+                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:222:18: error: request for member 'Vn' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .Vn = *ball_1 .Vn;
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:222:32: error: request for member 'Vn' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .Vn = *ball_1 .Vn;
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:223:18: error: request for member 'Vn' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .Vn = o;
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:225:18: error: request for member 'vx' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .vx = *ball_2 .Vn*sin - *ball_2 .Vt*cos; //обратный поворот системы координат шар1
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:225:32: error: request for member 'Vn' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .vx = *ball_2 .Vn*sin - *ball_2 .Vt*cos; //обратный поворот системы координат шар1
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:225:50: error: request for member 'Vt' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .vx = *ball_2 .Vn*sin - *ball_2 .Vt*cos; //обратный поворот системы координат шар1
+                                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:226:18: error: request for member 'vy1' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .vy1 = *ball_2 .Vn*cos + *ball_2 .Vt*sin; //обратный поворот системы координат шар1
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:226:33: error: request for member 'Vn' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .vy1 = *ball_2 .Vn*cos + *ball_2 .Vt*sin; //обратный поворот системы координат шар1
+                                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:226:51: error: request for member 'Vt' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .vy1 = *ball_2 .Vn*cos + *ball_2 .Vt*sin; //обратный поворот системы координат шар1
+                                                   ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:18: error: request for member 'vx' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .vx = *ball_1 .Vn*sin - *ball_1 .Vt*cos; //обратный поворот системы координат шар2
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:32: error: request for member 'Vn' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .vx = *ball_1 .Vn*sin - *ball_1 .Vt*cos; //обратный поворот системы координат шар2
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:50: error: request for member 'Vt' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .vx = *ball_1 .Vn*sin - *ball_1 .Vt*cos; //обратный поворот системы координат шар2
+                                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:18: error: request for member 'vy' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .vy = *ball_1 .Vn*cos + *ball_1 .Vt*sin; //обратный поворот системы координат шар2
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:32: error: request for member 'Vn' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .vy = *ball_1 .Vn*cos + *ball_1 .Vt*sin; //обратный поворот системы координат шар2
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:50: error: request for member 'Vt' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .vy = *ball_1 .Vn*cos + *ball_1 .Vt*sin; //обратный поворот системы координат шар2
+                                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:230:18: error: request for member 'x' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .x = *ball_1 .x + *ball_1 .vx*dt;
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:230:31: error: request for member 'x' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .x = *ball_1 .x + *ball_1 .vx*dt;
+                               ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:230:44: error: request for member 'vx' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .x = *ball_1 .x + *ball_1 .vx*dt;
+                                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:231:18: error: request for member 'y' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .y = *ball_1 .y + *ball_1 .vy*dt;
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:231:31: error: request for member 'y' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .y = *ball_1 .y + *ball_1 .vy*dt;
+                               ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:231:44: error: request for member 'vy' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_1 .y = *ball_1 .y + *ball_1 .vy*dt;
+                                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:232:18: error: request for member 'x' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .x = *ball_2 .x + *ball_2 .vx*dt;
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:232:31: error: request for member 'x' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .x = *ball_2 .x + *ball_2 .vx*dt;
+                               ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:232:44: error: request for member 'vx' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .x = *ball_2 .x + *ball_2 .vx*dt;
+                                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:233:18: error: request for member 'y' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .y = *ball_2 .y + *ball_2 .vy*dt;
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:233:31: error: request for member 'y' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .y = *ball_2 .y + *ball_2 .vy*dt;
+                               ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:233:44: error: request for member 'vy' in 'ball_2', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+         *ball_2 .y = *ball_2 .y + *ball_2 .vy*dt;
+                                            ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021 10:51:21,90 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[11.06.2021 12:11:22,82 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
