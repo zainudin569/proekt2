@@ -56,23 +56,24 @@ void MoveBall()
                   rand() % 10, rand() % 10,
                   15 + rand() % 35,
                   TX_LIGHTBLUE, TX_BLUE };
+
     Ball ball2 = { rand() % W,  rand() % H,
                   rand() % 10, rand() % 10,
                   15 + rand() % 35,
                   TX_LIGHTRED, TX_RED };
 
+    Ball ball3 = { rand() % W,  rand() % H,
+                  rand() % 10, rand() % 10,
+                  15 + rand() % 35,
+                  TX_LIGHTGREEN, TX_GREEN };
 
-      int x2 = rand() % W,   y2 = rand() % H,
-         vx2 = rand() % 10, vy2 = rand() % 10,
-          r2 = 15 + rand() % 35;
+    Ball ball4 = { rand() % W,  rand() % H,
+                  rand() % 10, rand() % 10,
+                  15 + rand() % 35,
+                  TX_PINK , TX_BROWN };
 
-      int x3 = rand() % W,   y3 = rand() % H,
-         vx3 = rand() % 10, vy3 = rand() % 10,
-          r3 = 15 + rand() % 35;
 
-      int x4 = rand() % W,   y4 = rand() % H,
-         vx4 = rand() % 10, vy4 = rand() % 10,
-          r4 = 15 + rand() % 35;
+
 
     int dt = 1;
 
@@ -83,18 +84,16 @@ void MoveBall()
 
         DrowBall(ball1);
         DrowBall(ball2);
+        DrowBall(ball3);
+        DrowBall(ball4);
 
-        //DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
-        //DrowBall(x4, y4, vx4, vy4, r4, TX_PINK      , TX_BROWN);
-
-        printf ("In CraziBall(): x  = %d and y  = %d\n", x2, y2);
-        printf ("In CraziBall(): vx = %d and vy = %d\n", vx2, vy2);
+        //printf ("In CraziBall(): x  = %d and y  = %d\n", x2, y2);
+        //printf ("In CraziBall(): vx = %d and vy = %d\n", vx2, vy2);
 
         PhysicsBall(&ball1, dt);
         PhysicsBall(&ball2, dt);
-
-        //PhysicsBall(&x3, &y3, &vx3, &vy3, dt, r3);
-        //PhysicsBall(&x4, &y4, &vx4, &vy4, dt, r4);
+        PhysicsBall(&ball3, dt);
+        PhysicsBall(&ball4, dt);
 
         /*Physics2Ball( &x1,  &y1,  &x2,  &y2,
                      &vx1, &vy1, &vx2, &vy2,
