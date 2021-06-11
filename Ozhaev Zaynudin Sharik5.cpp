@@ -226,7 +226,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
     float Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
     float Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-    printf ("Coordin do(): d  = %d\n", d);
+    //printf ("Coordin do(): d  = %d\n", d);
     float sin = Dx/d; // sin угла треугольника
     float cos = Dy/d; // cos угла треугольника
 
@@ -235,7 +235,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         float Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         float Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
-        printf ("Coordin do(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
+        //printf ("Coordin do(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
         /*
         float Vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
@@ -268,7 +268,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         float Vt1 = -(*ball_2) .vx*cos + (*ball_2) .vy*sin; //поворот системы координат шар1
         float Vt2 = -(*ball_1) .vx*cos + (*ball_1) .vy*sin; //поворот системы координат шар2
 
-        printf ("Coordin pos(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
+        //printf ("Coordin pos(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
 
         float o = Vn2; //меняем местами vn1 и vn2
         Vn2 = Vn1;
