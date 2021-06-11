@@ -123,23 +123,23 @@ void ControlBall(Ball* ball)
 
         if (txGetAsyncKeyState (VK_F1))
             {
-            *ball .Color = TX_LIGHTRED;
-            *ball .SetFillColor = TX_RED;
+            (*ball) .Color = TX_LIGHTRED;
+            (*ball) .SetFillColor = TX_RED;
             }
         if (txGetAsyncKeyState (VK_F2))
             {
-            *ball .Color = TX_LIGHTBLUE;
-            *ball .FillColor = TX_BLUE;
+            (*ball) .Color = TX_LIGHTBLUE;
+            (*ball) .FillColor = TX_BLUE;
             }
         if (txGetAsyncKeyState (VK_F3))
             {
-            *ball .Color = TX_LIGHTGREEN);
-            *ball .FillColor = TX_GREEN;
+            (*ball) .Color = TX_LIGHTGREEN);
+            (*ball) .FillColor = TX_GREEN;
             }
         if (txGetAsyncKeyState (VK_F4))
             {
-            *ball .Color     = RGB(*ball .x,   *ball .y,   150);
-            *ball .FillColor = RGB(*ball .x/2, *ball .y/2, 150);
+            (*ball) .Color     = RGB(*ball .x,   *ball .y,   150);
+            (*ball) .FillColor = RGB(*ball .x/2, *ball .y/2, 150);
             }
         }
 
