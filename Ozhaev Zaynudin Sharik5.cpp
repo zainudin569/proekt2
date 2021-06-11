@@ -272,7 +272,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         (*ball_1) .y = (*ball_1) .y + (*ball_1) .vy*dt;
         (*ball_2) .x = (*ball_2) .x + (*ball_2) .vx*dt;
         (*ball_2) .y = (*ball_2) .y + (*ball_2) .vy*dt;
-        //txSleep (5000);
+        txSleep (5000);
         }
 
 }
