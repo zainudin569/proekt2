@@ -235,20 +235,20 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         float Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         float Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
-        float vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
+        float Vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
-        if (vt > 0.6) vt = 0.6;
-        if (vt < -0.6) vt = -0.6;
+        if (Vt > 0.6) vt = 0.6;
+        if (Vt < -0.6) vt = -0.6;
 
-        printf ("Coordin do(): r1  = %d, r2= %d, vt  = %d\n", (*ball_1) .r, (*ball_2) .r, vt);
-        printf ("Coordin do(): vn1  = %d and vn2  = %d\n", vn1, vn2);
+        printf ("Coordin do(): r1  = %d, r2= %d, vt  = %d\n", (*ball_1) .r, (*ball_2) .r, Vt);
+        printf ("Coordin do(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
         printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
 
-        (*ball_1) .x = (*ball_1) .x - (*ball_1) .vx*vt;
-        (*ball_1) .y = (*ball_1) .x - (*ball_1) .vy*vt;
-        (*ball_2) .x = (*ball_2) .x - (*ball_2) .vx*vt;
-        (*ball_2) .y = (*ball_2) .x - (*ball_2) .vy*vt;
+        (*ball_1) .x = (*ball_1) .x - (*ball_1) .vx*Vt;
+        (*ball_1) .y = (*ball_1) .x - (*ball_1) .vy*Vt;
+        (*ball_2) .x = (*ball_2) .x - (*ball_2) .vx*Vt;
+        (*ball_2) .y = (*ball_2) .x - (*ball_2) .vy*Vt;
 
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
