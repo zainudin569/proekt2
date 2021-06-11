@@ -86,10 +86,10 @@ void MoveBall()
 
 
         CollisionBall(&ball1, &ball2, dt);
-        /*CollisionBall(&ball1, &ball3, dt);
+        CollisionBall(&ball1, &ball3, dt);
         CollisionBall(&ball1, &ball4, dt);
 
-        CollisionBall(&ball2, &ball1, dt);
+        /*CollisionBall(&ball2, &ball1, dt);
         CollisionBall(&ball2, &ball3, dt);
         CollisionBall(&ball2, &ball4, dt);
 
