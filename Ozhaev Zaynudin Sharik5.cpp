@@ -17,7 +17,7 @@ struct Ball
 void MoveBall();
 void DrowBall(Ball ball);
 void PhysicsBall(Ball* ball, int dt);
-void CollisionBall(Ball* ball_1, Ball* ball_2,);
+void CollisionBall(Ball* ball_1, Ball* ball_2);
 void ControlBall(Ball* ball);
 
 //void bilo_stolknov (double xA, double yA, double xB, double yB, double rA, double rB)
