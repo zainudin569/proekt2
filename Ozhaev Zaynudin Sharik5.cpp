@@ -71,7 +71,7 @@ void MoveBall()
         txSetFillColor (TX_BLACK);
         txClear ();
 
-        DrowBall(Ball ball1);
+        DrowBall(Ball);
         //DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTRED  , TX_RED  );
         //DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
         //DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
