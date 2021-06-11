@@ -82,9 +82,7 @@ void MoveBall()
 
 
         CollisionBall(&ball1, &ball2, dt);
-        /*Physics2Ball( &x1,  &y1,  &x2,  &y2,
-                     &vx1, &vy1, &vx2, &vy2,
-                      &r1, &r2, dt);*/
+
         /*int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
         if (bilo_li_ono)
             {
@@ -207,8 +205,8 @@ viod Bam_balls (int* x, int* y, int* vx, int* vy);
 
 void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
 {
-    float Dx = (*ball_1) .x - (*ball_1) .x; // стороны треугольника
-    float Dy = (*ball_1) .y - (*ball_1) .y; // стороны треугольника
+    float Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
+    float Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
     float sin = Dx/d; // sin угла треугольника
     float cos = Dy/d; // cos угла треугольника
