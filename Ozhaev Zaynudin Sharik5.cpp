@@ -3,7 +3,7 @@ const int W = 1100;
 const int H = 720;
 
 void MoveBall();
-void DrowBall();
+void DrowBall(Ball);
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
 void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
                   int* vx1, int* vy1, int* vx2, int* vy2,
@@ -71,7 +71,7 @@ void MoveBall()
         txSetFillColor (TX_BLACK);
         txClear ();
 
-        DrowBall(Ball ball1);
+        DrowBall(ball1);
         //DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTRED  , TX_RED  );
         //DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
         //DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
