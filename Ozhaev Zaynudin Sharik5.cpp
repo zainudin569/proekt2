@@ -250,10 +250,10 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
 
-        (*ball_1) .x = (*ball_1) .x - (*ball_1) .vx*Vt;
-        (*ball_1) .y = (*ball_1) .x - (*ball_1) .vy*Vt;
-        (*ball_2) .x = (*ball_2) .x - (*ball_2) .vx*Vt;
-        (*ball_2) .y = (*ball_2) .x - (*ball_2) .vy*Vt;
+        (*ball_1) .x = ROUND((*ball_1) .x - (*ball_1) .vx*Vt);
+        (*ball_1) .y = ROUND((*ball_1) .x - (*ball_1) .vy*Vt);
+        (*ball_2) .x = ROUND((*ball_2) .x - (*ball_2) .vx*Vt);
+        (*ball_2) .y = ROUND((*ball_2) .x - (*ball_2) .vy*Vt);
 
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
