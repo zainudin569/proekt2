@@ -100,7 +100,7 @@ void MoveBall()
 
 //---------------------------------------------------------------------------------
 
-void DrowBall(Ball *ball)
+void DrowBall(Ball ball)
     {
     txSetColor ((ball .Color), 2);
     txSetFillColor (ball .FillColor);
