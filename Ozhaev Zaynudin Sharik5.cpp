@@ -242,7 +242,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
 
         double Vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
-        if (Vt > 0.6) Vt = 0.6
+        if (Vt > 0.6) Vt = 0.6;
         if (Vt < -0.6) Vt = -0.6;
 
         printf ("Coordin do(): r1  = %d, r2= %d, vt  = %f\n", (*ball_1) .r, (*ball_2) .r, Vt);
