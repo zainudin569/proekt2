@@ -42,14 +42,11 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:243:93: warning:
          printf ("Coordin do(): r1  = %d, r2= %d, vt  = %d\n", (*ball_1) .r, (*ball_2) .r, vt);
                                                                                              ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:244:60: error: 'vn1' was not declared in this scope
-         printf ("Coordin do(): vn1  = %d and vn2  = %d\n", vn1, vn2)
+         printf ("Coordin do(): vn1  = %d and vn2  = %d\n", vn1, vn2);
                                                             ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:244:65: error: 'vn2' was not declared in this scope
-         printf ("Coordin do(): vn1  = %d and vn2  = %d\n", vn1, vn2)
+         printf ("Coordin do(): vn1  = %d and vn2  = %d\n", vn1, vn2);
                                                                  ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:245:9: error: expected ';' before 'printf'
-         printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
-         ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:248:53: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          (*ball_1) .x = (*ball_1) .x - (*ball_1) .vx*vt;
                                                      ^
@@ -130,5 +127,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:276:33: warning:
          (*ball_2) .vy = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
                                  ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021 14:24:27,09 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[11.06.2021 14:24:42,18 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
