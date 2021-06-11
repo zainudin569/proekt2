@@ -17,7 +17,7 @@ struct Ball
 void MoveBall();
 void DrowBall(Ball ball);
 void PhysicsBall(Ball* ball, int dt);
-void CollisionBall(Ball* ball_1, Ball* ball_2, int dt);
+void CollisionBall(Ball* ball_1, Ball* ball_2,);
 void ControlBall(Ball* ball);
 
 //void bilo_stolknov (double xA, double yA, double xB, double yB, double rA, double rB)
@@ -85,7 +85,7 @@ void MoveBall()
         PhysicsBall(&ball4, dt);
 
 
-        CollisionBall(&ball1, &ball2, dt);
+        CollisionBall(&ball1, &ball2);
         /*CollisionBall(&ball1, &ball3, dt);
         CollisionBall(&ball1, &ball4, dt);
 
@@ -221,7 +221,7 @@ viod Bam_balls (int* x, int* y, int* vx, int* vy);
 
 //---------------------------------------------------------------------------------
 
-void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
+void CollisionBall (Ball* ball_1, Ball* ball_2)
 {
     int Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
     int Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
