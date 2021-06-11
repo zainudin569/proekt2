@@ -1,16 +1,4 @@
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void CollisionBall(Ball*, Ball*, int)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:208:25: error: request for member 'x' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
-     float Dx = *ball_1 .x - *ball_1 .x; // стороны треугольника
-                         ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:208:38: error: request for member 'x' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
-     float Dx = *ball_1 .x - *ball_1 .x; // стороны треугольника
-                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:209:25: error: request for member 'y' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
-     float Dy = *ball_1 .y - *ball_1 .y; // стороны треугольника
-                         ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:209:38: error: request for member 'y' in 'ball_1', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
-     float Dy = *ball_1 .y - *ball_1 .y; // стороны треугольника
-                                      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:210:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                  ^
@@ -63,5 +51,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:33: warning:
          (*ball_2) .vy = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
                                  ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021 12:23:26,29 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[11.06.2021 12:24:05,93 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

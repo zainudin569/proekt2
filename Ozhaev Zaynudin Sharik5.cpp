@@ -205,8 +205,8 @@ viod Bam_balls (int* x, int* y, int* vx, int* vy);
 
 void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
 {
-    float Dx = *ball_1 .x - *ball_1 .x; // стороны треугольника
-    float Dy = *ball_1 .y - *ball_1 .y; // стороны треугольника
+    float Dx = (*ball_1) .x - (*ball_1) .x; // стороны треугольника
+    float Dy = (*ball_1) .y - (*ball_1) .y; // стороны треугольника
     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
     float sin = Dx/d; // sin угла треугольника
     float cos = Dy/d; // cos угла треугольника
