@@ -41,22 +41,22 @@ void MoveBall()
     srand(time(NULL));
 
     Ball ball1 = { rand() % W,  rand() % H,
-                  rand() % 10, rand() % 10,
+                  1 + rand() % 9, 1 + rand() % 9,
                   15 + rand() % 35,
                   TX_LIGHTBLUE, TX_BLUE };
 
     Ball ball2 = { rand() % W,  rand() % H,
-                  rand() % 10, rand() % 10,
+                  1 + rand() % 9, 1 + rand() % 9,
                   15 + rand() % 35,
                   TX_LIGHTRED, TX_RED };
 
     Ball ball3 = { rand() % W,  rand() % H,
-                  rand() % 10, rand() % 10,
+                  1 + rand() % 9, 1 + rand() % 9,
                   15 + rand() % 35,
                   TX_LIGHTGREEN, TX_GREEN };
 
     Ball ball4 = { rand() % W,  rand() % H,
-                  rand() % 10, rand() % 10,
+                  1 + rand() % 9, 1 + rand() % 9,
                   15 + rand() % 35,
                   TX_PINK , TX_BROWN };
 
