@@ -2,6 +2,16 @@
 const int W = 1100;
 const int H = 720;
 
+truct Ball
+    {
+    int  x, y , vx, vy;
+
+    int r;
+
+    COLORREF Color;
+    COLORREF FillColor;
+    };
+
 void MoveBall();
 void DrowBall(Ball ball);
 void PhysicsBall(int* x, int* y, int* vx, int* vy, int dt, int r);
@@ -26,7 +36,7 @@ int main()
 
 //---------------------------------------------------------------------------------
 
-struct Ball
+/*struct Ball
     {
     int  x, y , vx, vy;
 
@@ -35,7 +45,7 @@ struct Ball
     COLORREF Color;
     COLORREF FillColor;
     };
-
+*/
 //---------------------------------------------------------------------------------
 
 void MoveBall()
