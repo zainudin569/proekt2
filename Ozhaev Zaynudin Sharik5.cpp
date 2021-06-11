@@ -86,7 +86,7 @@ void MoveBall()
 
 
         CollisionBall(&ball1, &ball2);
-        /*CollisionBall(&ball1, &ball3, dt);
+        CollisionBall(&ball1, &ball3, dt);
         CollisionBall(&ball1, &ball4, dt);
 
         CollisionBall(&ball2, &ball1, dt);
@@ -100,7 +100,7 @@ void MoveBall()
         CollisionBall(&ball4, &ball1, dt);
         CollisionBall(&ball4, &ball2, dt);
         CollisionBall(&ball4, &ball3, dt);
-         */
+
         /*int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
         if (bilo_li_ono)
             {
@@ -226,7 +226,6 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
     int Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
     int Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
     double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-    printf ("Coordin do():  d  = %f\n", d);
     double sin = Dx/d; // sin угла треугольника
     double cos = Dy/d; // cos угла треугольника
 
