@@ -114,10 +114,10 @@ void DrowBall(Ball* ball)
 
 void ControlBall(Ball *ball))
         {
-        if (txGetAsyncKeyState (VK_RIGHT)) ++(*ball1) .vx;
-        if (txGetAsyncKeyState (VK_LEFT))  --(*ball1) .vx;
-        if (txGetAsyncKeyState (VK_UP))    --(*ball1) .vy;
-        if (txGetAsyncKeyState (VK_DOWN))  ++(*ball1) .vy;
+        if (txGetAsyncKeyState (VK_RIGHT)) ++(*ball) .vx;
+        if (txGetAsyncKeyState (VK_LEFT))  --(*ball) .vx;
+        if (txGetAsyncKeyState (VK_UP))    --(*ball) .vy;
+        if (txGetAsyncKeyState (VK_DOWN))  ++(*ball) .vy;
 
         if (txGetAsyncKeyState (VK_SPACE)) (*ball1) .vy = (*ball1) .vx = 0;
 
