@@ -100,7 +100,7 @@ void MoveBall()
 
 //---------------------------------------------------------------------------------
 
-void DrowBall(Ball* ball)
+void DrowBall(Ball *ball)
     {
     txSetColor ((ball .Color), 2);
     txSetFillColor (ball .FillColor);
@@ -112,7 +112,7 @@ void DrowBall(Ball* ball)
 
 //---------------------------------------------------------------------------------
 
-void ControlBall(Ball *ball))
+void ControlBall(Ball* ball))
         {
         if (txGetAsyncKeyState (VK_RIGHT)) ++(*ball) .vx;
         if (txGetAsyncKeyState (VK_LEFT))  --(*ball) .vx;
