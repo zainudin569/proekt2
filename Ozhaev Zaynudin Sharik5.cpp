@@ -119,7 +119,7 @@ void ControlBall(Ball* ball)
         if (txGetAsyncKeyState (VK_UP))    --(*ball) .vy;
         if (txGetAsyncKeyState (VK_DOWN))  ++(*ball) .vy;
 
-        if (txGetAsyncKeyState (VK_SPACE)) (*ball1) .vy = (*ball1) .vx = 0;
+        if (txGetAsyncKeyState (VK_SPACE)) (*ball) .vy = (*ball) .vx = 0;
 
         if (txGetAsyncKeyState (VK_F1))
             {
