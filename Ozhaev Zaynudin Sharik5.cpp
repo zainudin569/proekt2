@@ -249,7 +249,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         //printf ("Coordin do(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
         //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
-/*
+
         (*ball_1) .x = (*ball_1) .x - (*ball_1) .vx*Vt;
         (*ball_1) .y = (*ball_1) .x - (*ball_1) .vy*Vt;
         (*ball_2) .x = (*ball_2) .x - (*ball_2) .vx*Vt;
@@ -258,8 +258,8 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
 
-        txSleep (5000);
-        */
+        //txSleep (5000);
+
         Dx = (*ball_1) .x - (*ball_2) .x;
         Dy = (*ball_1) .y - (*ball_2) .y;
         d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
