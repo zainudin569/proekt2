@@ -43,7 +43,7 @@ void MoveBall()
     Ball ball1 = { rand() % W,  rand() % H,
                   1 + rand() % 9, 1 + rand() % 9,
                   15 + rand() % 35,
-                  TX_LIGHTBLUE, TX_BLUE };
+                  RGB(rand() % 35, rand() % 35, rand() % 35), RGB((rand() % 35, rand() % 35, rand() % 35) };
 
     Ball ball2 = { rand() % W,  rand() % H,
                   1 + rand() % 9, 1 + rand() % 9,
