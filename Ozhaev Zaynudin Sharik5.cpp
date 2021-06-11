@@ -163,7 +163,7 @@ void PhysicsBall(Ball *ball, int dt)
     (*ball) .x += (*ball) .vx * dt;
     (*ball) .y += (*ball) .vy * dt;
 
-    if ((*ball) .x > W - (ball .r))
+    if ((*ball) .x > W - (*ball) .r)
         {
          (*ball) .vx =   - (*ball) .vx;
          (*ball) .x = W - ball .r;
