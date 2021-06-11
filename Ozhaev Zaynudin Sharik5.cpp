@@ -234,24 +234,21 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
+        printf ("Coordin do():  dt  = %f\n", dt);
 
         double dt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
         if (dt > 0.6) dt = 0.6;
         if (dt < -0.6) dt = -0.6;
 
-        printf ("Coordin do(): r1  = %d, r2= %d, dt  = %f\n", (*ball_1) .r, (*ball_2) .r, dt);
-        //printf ("Coordin do(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
-        //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
-        //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
-
         (*ball_1) .x = ROUND((*ball_1) .x - (*ball_1) .vx*dt);
         (*ball_1) .y = ROUND((*ball_1) .y - (*ball_1) .vy*dt);
         (*ball_2) .x = ROUND((*ball_2) .x - (*ball_2) .vx*dt);
         (*ball_2) .y = ROUND((*ball_2) .y - (*ball_2) .vy*dt);
 
-        printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
-        printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
+        printf ("Coordin pos():  dt  = %f\n", dt);
+        printf ("Coordin (): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
+        printf ("Coordin (): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
 
         //txSleep (5000);
 
