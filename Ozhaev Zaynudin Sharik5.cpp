@@ -112,7 +112,7 @@ void DrowBall(Ball ball)
 
 //---------------------------------------------------------------------------------
 
-void ControlBall(Ball* ball))
+void ControlBall(Ball* ball)
         {
         if (txGetAsyncKeyState (VK_RIGHT)) ++(*ball) .vx;
         if (txGetAsyncKeyState (VK_LEFT))  --(*ball) .vx;

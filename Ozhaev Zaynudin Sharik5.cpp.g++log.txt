@@ -1,6 +1,106 @@
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:115:29: error: expected initializer before ')' token
- void ControlBall(Ball* ball))
-                             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void ControlBall(Ball*)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:122:46: error: 'ball1' was not declared in this scope
+         if (txGetAsyncKeyState (VK_SPACE)) (*ball1) .vy = (*ball1) .vx = 0;
+                                              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:126:20: error: request for member 'Color' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .Color = TX_LIGHTRED;
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:127:20: error: request for member 'SetFillColor' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .SetFillColor = TX_RED;
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:131:20: error: request for member 'Color' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .Color = TX_LIGHTBLUE;
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:132:20: error: request for member 'FillColor' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .FillColor = TX_BLUE;
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:136:20: error: request for member 'Color' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .Color = TX_LIGHTGREEN);
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:136:41: error: expected ';' before ')' token
+             *ball .Color = TX_LIGHTGREEN);
+                                         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:137:20: error: request for member 'FillColor' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .FillColor = TX_GREEN;
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:141:20: error: request for member 'Color' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .Color     = RGB(*ball .x,   *ball .y,   150);
+                    ^
+In file included from c:\users\zainu\desktop\курс\codeblocks\mingw\include\windows.h:52:0,
+                 from C:\Users\zainu\Desktop\курс\TX\TXLib.h:873,
+                 from c:\users\zainu\desktop\курс\codeblocks\mingw\include\txlib.h:1,
+                 from C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:1:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:141:43: error: request for member 'x' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .Color     = RGB(*ball .x,   *ball .y,   150);
+                                           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:141:55: error: request for member 'y' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .Color     = RGB(*ball .x,   *ball .y,   150);
+                                                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:142:20: error: request for member 'FillColor' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .FillColor = RGB(*ball .x/2, *ball .y/2, 150);
+                    ^
+In file included from c:\users\zainu\desktop\курс\codeblocks\mingw\include\windows.h:52:0,
+                 from C:\Users\zainu\Desktop\курс\TX\TXLib.h:873,
+                 from c:\users\zainu\desktop\курс\codeblocks\mingw\include\txlib.h:1,
+                 from C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:1:
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:142:43: error: request for member 'x' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .FillColor = RGB(*ball .x/2, *ball .y/2, 150);
+                                           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:142:55: error: request for member 'y' in 'ball', which is of pointer type 'Ball*' (maybe you meant to use '->' ?)
+             *ball .FillColor = RGB(*ball .x/2, *ball .y/2, 150);
+                                                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:216:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float Dx = *x1 - *x2; // стороны треугольника
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:217:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float Dy = *y1 - *y2; // стороны треугольника
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
+     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+                                 ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:45: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+                                             ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:50: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
+                                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:224:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
+                          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:224:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
+                                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:225:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
+                          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:225:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
+                                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:226:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
+                           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:226:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
+                                      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
+                           ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
+                                      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:233:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+         *vx1 = Vn2*sin - Vt2*cos; //обратный поворот системы координат шар1
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:234:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+         *vy1 = Vn2*cos + Vt2*sin; //обратный поворот системы координат шар1
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:235:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+         *vx2 = Vn1*sin - Vt1*cos; //обратный поворот системы координат шар2
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:236:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+         *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
+                        ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021 10:35:13,16 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
+[11.06.2021 10:35:26,15 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
