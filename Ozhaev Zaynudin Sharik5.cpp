@@ -42,7 +42,7 @@ void MoveBall()
     {
     srand(time(NULL));
 
-    Ball bal1 = { rand() % W,  rand() % H,
+    Ball ball1 = { rand() % W,  rand() % H,
                   rand() % 10, rand() % 10,
                   15 + rand() % 35,
                   TX_LIGHTBLUE, TX_BLUE };
@@ -71,7 +71,7 @@ void MoveBall()
         txSetFillColor (TX_BLACK);
         txClear ();
 
-        DrowBall(Ball);
+        DrowBall(ball1);
         //DrowBall(x1, y1, vx1, vy1, r1, TX_LIGHTRED  , TX_RED  );
         //DrowBall(x2, y2, vx2, vy2, r2, TX_LIGHTRED  , TX_RED  );
         //DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
@@ -103,7 +103,7 @@ void MoveBall()
 
 //---------------------------------------------------------------------------------
 
-void DrowBall(Ball ball)
+void DrowBall(Ball ball1)
     {
     txSetColor (Color, 2);
     txSetFillColor (FillColor);
