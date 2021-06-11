@@ -92,7 +92,7 @@ void MoveBall()
             }
         Ball_Control (&vx1, &vy1);
         */
-        //ControlBall(x1, y1, &vx1, &vy1);
+        ControlBall(&ball1);
 
         txSleep (1);
         }
