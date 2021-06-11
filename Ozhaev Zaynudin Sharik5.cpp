@@ -226,11 +226,6 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
     int Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
     int Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
     double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-    //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_2) .x);
-    //printf ("Coordin do(): Dx  = %d\n", Dx);
-    //printf ("Coordin do(): Dy  = %d\n", Dy);
-    //printf ("Coordin do(): d  = %f\n", d);
-    //txSleep (5000);
     double sin = Dx/d; // sin угла треугольника
     double cos = Dy/d; // cos угла треугольника
 
@@ -251,9 +246,9 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         //printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
 
         (*ball_1) .x = ROUND((*ball_1) .x - (*ball_1) .vx*dt);
-        (*ball_1) .y = ROUND((*ball_1) .x - (*ball_1) .vy*dt);
+        (*ball_1) .y = ROUND((*ball_1) .y - (*ball_1) .vy*dt);
         (*ball_2) .x = ROUND((*ball_2) .x - (*ball_2) .vx*dt);
-        (*ball_2) .y = ROUND((*ball_2) .x - (*ball_2) .vy*dt);
+        (*ball_2) .y = ROUND((*ball_2) .y - (*ball_2) .vy*dt);
 
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_1) .y);
         printf ("Coordin pos(): x  = %d and y  = %d\n", (*ball_2) .x, (*ball_2) .y);
