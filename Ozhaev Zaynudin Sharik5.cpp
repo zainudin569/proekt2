@@ -230,7 +230,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
     printf ("Coordin do(): Dx  = %d\n", Dx);
     printf ("Coordin do(): Dy  = %d\n", Dy);
     printf ("Coordin do(): d  = %d\n", d);
-    txSleep (5000);
+    //txSleep (5000);
     float sin = Dx/d; // sin угла треугольника
     float cos = Dy/d; // cos угла треугольника
 
