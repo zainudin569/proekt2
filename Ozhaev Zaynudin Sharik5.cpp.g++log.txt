@@ -1,10 +1,4 @@
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void CollisionBall(Ball*, Ball*, int)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:29: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-     float Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
-                             ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-     float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-                      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                  ^
@@ -14,14 +8,14 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:45: warning:
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:50: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                                   ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:231:43: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
-     printf ("Coordin do(): Dy  = %d\n", Dy);
-                                           ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:232:41: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
      printf ("Coordin do(): d  = %d\n", d);
                                          ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:234:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float sin = Dx/d; // sin угла треугольника
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:235:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+     float cos = Dy/d; // cos угла треугольника
                     ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:239:35: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
@@ -35,12 +29,6 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:240:35: warning:
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:240:55: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
                                                        ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:265:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         Dy = (*ball_1) .y - (*ball_2) .y;
-                           ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:266:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
-         d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
-                    ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:266:31: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
          d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
                                ^
@@ -52,6 +40,9 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:266:48: warning:
                                                 ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:267:18: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          sin = Dx/d; // sin
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:268:18: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+         cos = Dy/d; // cos
                   ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:269:29: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
@@ -90,5 +81,5 @@ C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:284:33: warning:
          (*ball_2) .vy = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
                                  ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021 15:00:27,70 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[11.06.2021 15:01:05,97 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
