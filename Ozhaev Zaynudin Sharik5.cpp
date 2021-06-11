@@ -154,28 +154,24 @@ void PhysicsBall(Ball* ball, int dt)
         {
         (*ball) .vx =   - (*ball) .vx;
         (*ball) .x  = W - (*ball) .r;
-        return;
         }
 
     if ((*ball) .y  > H - (*ball) .r)
         {
         (*ball) .vy =   - (*ball) .vy;
         (*ball) .y  = H - (*ball) .r;
-        return;
         }
 
     if ((*ball) .x <  0 + (*ball) .r)
         {
         (*ball) .vx =   - (*ball) .vx;
         (*ball) .x  = 0 + (*ball) .r;
-        return;
         }
 
     if ((*ball) .y <   0 + (*ball) .r)
         {
         (*ball) .vy =   - (*ball) .vy;
         (*ball) .y  = 0 + (*ball) .r;
-        return;
         }
     }
 
