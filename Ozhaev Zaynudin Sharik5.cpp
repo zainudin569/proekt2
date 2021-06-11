@@ -236,10 +236,10 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
 
     if (d < (*ball_1) .r + (*ball_2) .r) //проверка столкновения
         {
-        float Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
-        float Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
+        double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
+        double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
-        //printf ("Coordin do(): vn1  = %d and vn2  = %d\n", Vn1, Vn2);
+        printf ("Coordin do(): vn1  = %f and vn2  = %f\n", Vn1, Vn2);
         /*
         float Vt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
