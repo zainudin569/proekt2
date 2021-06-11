@@ -39,30 +39,30 @@ int main()
 void MoveBall()
     {
     srand(time(NULL));
-    int ball [];
-    for ( int x = 0; x < 4; x++ )
-        {
-        Ball ball[x] = { rand() % W,  rand() % H,
-                        1 + rand() % 9, 1 + rand() % 9,
-                        15 + rand() % 35,
-                        RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
-                        RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
-        }
 
-    //Ball ball2 = { rand() % W,  rand() % H,
-                  1 + rand() % 9, 1 + rand() % 9,
-                  15 + rand() % 35,
-                  TX_LIGHTRED, TX_RED };
+    Ball ball1 = { rand() % W,  rand() % H,
+                 1 + rand() % 9, 1 + rand() % 9,
+                 15 + rand() % 35,
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
-   // Ball ball3 = { rand() % W,  rand() % H,
-                  1 + rand() % 9, 1 + rand() % 9,
-                  15 + rand() % 35,
-                  TX_LIGHTGREEN, TX_GREEN };
+    Ball ball2 = { rand() % W,  rand() % H,
+                 1 + rand() % 9, 1 + rand() % 9,
+                 15 + rand() % 35,
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
-    //Ball ball4 = { rand() % W,  rand() % H,
-                  1 + rand() % 9, 1 + rand() % 9,
-                  15 + rand() % 35,
-                  TX_PINK , TX_BROWN };
+    Ball ball3 = { rand() % W,  rand() % H,
+                 1 + rand() % 9, 1 + rand() % 9,
+                 15 + rand() % 35,
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
+
+    Ball ball4 = { rand() % W,  rand() % H,
+                 1 + rand() % 9, 1 + rand() % 9,
+                 15 + rand() % 35,
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
+                 RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
     int dt = 1;
 
