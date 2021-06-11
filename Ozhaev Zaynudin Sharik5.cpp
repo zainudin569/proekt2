@@ -87,13 +87,13 @@ void MoveBall()
         Physics2Ball( &x1,  &y1,  &x2,  &y2,
                      &vx1, &vy1, &vx2, &vy2,
                       &r1, &r2, dt);
-        int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
+        /*int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
         if (bilo_li_ono)
             {
             Bam_balls (x1, y1, &vx1, &vy1, x2, y2, &vx2, &vy2);
             }
-        //Ball_Control (&vx1, &vy1);
-
+        Ball_Control (&vx1, &vy1);
+        */
         ControlBall(x1, y1, &vx1, &vy1);
 
         txSleep (1);
