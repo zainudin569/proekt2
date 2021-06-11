@@ -42,7 +42,7 @@ void MoveBall()
 
     Ball ball1 = { 255,  300,
                  1 + rand() % 9, 1 + rand() % 9,
-                 15,
+                 50,
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
