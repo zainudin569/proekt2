@@ -76,8 +76,8 @@ void MoveBall()
         DrowBall(x3, y3, vx3, vy3, r3, TX_LIGHTGREEN, TX_GREEN);
         DrowBall(x4, y4, vx4, vy4, r4, TX_PINK      , TX_BROWN);
 
-        prinf ("In CraziBall(): x  = %d and y  = %d\n", x2, y2);
-        prinf ("In CraziBall(): vx = %d and vy = %d\n", vx2, vy2);
+        printf ("In CraziBall(): x  = %d and y  = %d\n", x2, y2);
+        printf ("In CraziBall(): vx = %d and vy = %d\n", vx2, vy2);
 
         PhysicsBall(&x1, &y1, &vx1, &vy1, dt, r1);
         PhysicsBall(&x2, &y2, &vx2, &vy2, dt, r2);
