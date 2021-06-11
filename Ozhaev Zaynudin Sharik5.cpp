@@ -122,8 +122,8 @@ void DrowBall(Ball ball)
     txSetFillColor (ball .FillColor);
 
     txCircle (ball .x, ball .y, ball .r);
-    //txLine (x, y, x + vx*5, y + vy*5);
-    //txCircle (x + vx*5, y + vy*5, 3);
+    txLine (ball .x, ball .y, ball .x + ball .vx*5, ball .y + ball .vy*5);
+    txCircle (ball .x + ball .vx*5, ball .y + ball .vy*5, 3);
     }
 
 //---------------------------------------------------------------------------------
