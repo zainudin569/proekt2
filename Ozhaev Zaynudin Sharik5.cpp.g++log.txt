@@ -1,55 +1,64 @@
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:20:38: error: redefinition of 'Ball* ball'
+ void CollisionBall(Ball* ball, Ball* ball, int dt);
+                                      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:20:26: error: 'Ball* ball' previously declared here
+ void CollisionBall(Ball* ball, Ball* ball, int dt);
+                          ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:212:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:206:6: warning: no previous declaration for 'void Physics2Ball(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*, int)' [-Wmissing-declarations]
+ void Physics2Ball(int*  x1, int*  y1, int*  x2, int*  y2,
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:210:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float Dx = *x1 - *x2; // стороны треугольника
                     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:213:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:211:20: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
      float Dy = *y1 - *y2; // стороны треугольника
                     ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:214:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:212:33: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                  ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:214:45: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:212:45: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                              ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:214:50: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:212:50: warning: conversion to 'float' alters 'double' constant value [-Wconversion]
      float d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                                   ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:220:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
                           ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:220:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:218:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vn1 = *vx2*sin + *vy2*cos; //поворот системы координат шар1
                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:221:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:219:26: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
                           ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:221:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:219:37: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vn2 = *vx1*sin + *vy1*cos; //поворот системы координат шар2
                                      ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:222:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:220:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
                            ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:222:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:220:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vt1 = -*vx2*cos + *vy2*sin; //поворот системы координат шар1
                                       ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:223:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:221:27: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
                            ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:223:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:221:38: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]
          float Vt2 = -*vx1*cos + *vy1*sin; //поворот системы координат шар2
                                       ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:229:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:227:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
          *vx1 = Vn2*sin - Vt2*cos; //обратный поворот системы координат шар1
                         ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:230:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:228:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
          *vy1 = Vn2*cos + Vt2*sin; //обратный поворот системы координат шар1
                         ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:231:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:229:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
          *vx2 = Vn1*sin - Vt1*cos; //обратный поворот системы координат шар2
                         ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:232:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:230:24: warning: conversion to 'int' from 'float' may alter its value [-Wconversion]
          *vy2 = Vn1*cos + Vt1*sin; //обратный поворот системы координат шар2
                         ^
 ---------------------------------------------------------------------------------------------
-[11.06.2021 10:47:15,14 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[11.06.2021 10:51:21,90 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
