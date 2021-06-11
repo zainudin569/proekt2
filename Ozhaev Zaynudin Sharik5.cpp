@@ -213,10 +213,10 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
 
     if (d < (*ball_1) .r + (*ball_2) .r) //проверка столкновения
         {
-        float (*ball_1) .Vn = *(ball_2) .vx*sin + *(ball_2) .vy*cos; //поворот системы координат шар1
-        float *(ball_2) .Vn = (*ball_1) .vx*sin + (*ball_1) .vy1*cos; //поворот системы координат шар2
-        float (*ball_1) .Vt = -(*ball_2 .vx)*cos + *(ball_2) .vy*sin; //поворот системы координат шар1
-        float *(ball_2).Vt = -(*ball_1) .vx*cos + (*ball_1) .vy*sin; //поворот системы координат шар2
+        float (*ball_1) .Vn = *(ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
+        float (*ball_2) .Vn = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
+        float (*ball_1) .Vt = -(*ball_2) .vx*cos + (*ball_2) .vy*sin; //поворот системы координат шар1
+        float (*ball_2) .Vt = -(*ball_1) .vx*cos + (*ball_1) .vy*sin; //поворот системы координат шар2
 
         float o = *(ball_2) .Vn; //меняем местами vn1 и vn2
         *(ball_2) .Vn = (*ball_1) .Vn;
