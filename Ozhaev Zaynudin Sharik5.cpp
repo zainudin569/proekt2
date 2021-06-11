@@ -124,7 +124,7 @@ void ControlBall(Ball* ball)
         if (txGetAsyncKeyState (VK_F1))
             {
             (*ball) .Color = TX_LIGHTRED;
-            (*ball) .SetFillColor = TX_RED;
+            (*ball) .FillColor = TX_RED;
             }
         if (txGetAsyncKeyState (VK_F2))
             {
