@@ -211,7 +211,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
     float sin = Dx/d; // sin угла треугольника
     float cos = Dy/d; // cos угла треугольника
 
-    if (d < *ball_1 .r + *ball_2 .r) //проверка столкновения
+    if (d < (*ball_1) .r + (*ball_2) .r) //проверка столкновения
         {
         float Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         float Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
