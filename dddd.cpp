@@ -7,7 +7,7 @@ struct Employee
     double salary;
 };
 
-void printInformation(Employee employee)
+void printInformation(Employee)
 {
     std::cout << "ID: " << employee.id << "\n";
     std::cout << "Age: " << employee.age << "\n";
