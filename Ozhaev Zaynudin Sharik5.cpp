@@ -239,8 +239,8 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
 
         double dt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
-        if (dt >  1) dt =  1;
-        if (dt < -1) dt = -1;
+        //if (dt >  1) dt =  1;
+        //if (dt < -1) dt = -1;
 
         (*ball_1) .x = ROUND((*ball_1) .x - (*ball_1) .vx*dt);
         (*ball_1) .y = ROUND((*ball_1) .y - (*ball_1) .vy*dt);
