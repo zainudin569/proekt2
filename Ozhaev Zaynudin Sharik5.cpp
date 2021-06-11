@@ -226,7 +226,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
     float Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
     float Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
     double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
-    printf ("Coordin do(): x  = %f and y  = %f\n", (*ball_1) .x, (*ball_2) .x);
+    printf ("Coordin do(): x  = %d and y  = %d\n", (*ball_1) .x, (*ball_2) .x);
     printf ("Coordin do(): Dx  = %f\n", Dx);
     printf ("Coordin do(): Dy  = %f\n", Dy);
     printf ("Coordin do(): d  = %f\n", d);
