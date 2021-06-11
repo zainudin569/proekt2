@@ -236,7 +236,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int dt)
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
         printf ("Coordin do():  dt  = %d\n", dt);
-        printf ("Coordin do():  vn1  = %f\n, vn2  = %f\n", vn1, vn2);
+        printf ("Coordin do():  vn1  = %f\n vn2  = %f\n", vn1, vn2);
 
         double Dt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
