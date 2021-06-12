@@ -1,5 +1,5 @@
 #include "TXLib.h"
-const int W = 1072;
+const int W = 1070;
 const int H = 650;
 struct Ball;
 
