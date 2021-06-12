@@ -254,7 +254,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int* score)
         {
         txPlaySound ("sounds/Zvuk_Ball.wav");
 
-        ++(*score)
+        ++(*score);
 
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
