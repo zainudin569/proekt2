@@ -18,9 +18,6 @@ int main()
     {
     txCreateWindow (W, H);
 
-    HDC Fon  = txLoadImage ("images\\Fon.bmp");
-    txBitBlt  (txDC(), 0, 100, 0, 0, Fon);
-
     MoveBall();
 
     txDeleteDC(Fon);
@@ -76,7 +73,8 @@ void MoveBall()
         {
         //txSetFillColor (TX_BLACK);
         //txClear ();
-
+        HDC Fon  = txLoadImage ("images\\Fon.bmp");
+        txBitBlt  (txDC(), 0, 100, 0, 0, "images\\Fon.bmp");
         DrowBall(ball1);
         DrowBall(ball2);
         DrowBall(ball3);
