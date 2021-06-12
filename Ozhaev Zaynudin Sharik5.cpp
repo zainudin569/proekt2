@@ -74,6 +74,9 @@ void MoveBall()
         {
 
         txBegin ();
+        txSetFillColor (TX_BLACK);
+        txClear ();
+
         txBitBlt  (txDC(), 0, 100, 0, 0, Fon);
 
         DrowBall(ball1);
@@ -90,21 +93,16 @@ void MoveBall()
         PhysicsBall(&ball4, dt);
 
 
-        CollisionBall(&ball1, &ball2);
+        CollisionBall(&ball1, &ball2); //проверка столкновения
         CollisionBall(&ball1, &ball3);
         CollisionBall(&ball1, &ball4);
 
-        //CollisionBall(&ball2, &ball1);
         CollisionBall(&ball2, &ball3);
         CollisionBall(&ball2, &ball4);
 
-        //CollisionBall(&ball3, &ball1);
-        //CollisionBall(&ball3, &ball2);
         CollisionBall(&ball3, &ball4);
 
-        //CollisionBall(&ball4, &ball1);
-        //CollisionBall(&ball4, &ball2);
-        //CollisionBall(&ball4, &ball3);
+
 
         /*int bilo_li_ono = bilo_stolknov (x1, y1, x2, y2, r1, r2);
         if (bilo_li_ono)
@@ -118,6 +116,7 @@ void MoveBall()
         txEnd ();
         txSleep (1);
         }
+
     txDeleteDC(Fon);
     }
 
