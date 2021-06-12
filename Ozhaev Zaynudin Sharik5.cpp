@@ -234,10 +234,12 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
+        if ((Vn1 - Vn2) == 0) Vn1 = Vn1 + 0.01;
+
         double dt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
 
-        if (dt >  0.6)  dt =  0.6;   // ограничение на dt, чтоб мяч не улетал
-        if (dt < -0.6) dt = -0.6;
+        if (dt >  1)  dt = 1;   // ограничение на dt, чтоб мяч не отскакивал далеко
+        if (dt < -1) dt = -1;
 
         (*ball_1) .x = ROUND((*ball_1) .x - (*ball_1) .vx*dt);
         (*ball_1) .y = ROUND((*ball_1) .y - (*ball_1) .vy*dt);
