@@ -158,7 +158,7 @@ void ControlBall(Ball* ball, int* F4_Col)
 
         if (txGetAsyncKeyState (VK_F4))
             {
-            *F4_Col = 1
+            *F4_Col = 1;
             }
 
         if (*F4_Col == 1)
