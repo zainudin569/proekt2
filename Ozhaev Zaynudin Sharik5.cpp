@@ -72,6 +72,7 @@ void MoveBall()
         {
         //txSetFillColor (TX_BLACK);
         //txClear ();
+        txBegin ();
         HDC Fon  = txLoadImage ("images\\Fon.bmp");
         txBitBlt  (txDC(), 0, 100, 0, 0, Fon);
         DrowBall(ball1);
@@ -113,9 +114,10 @@ void MoveBall()
         */
         ControlBall(&ball1, &F4_Col);
 
+        txEnd ();
         txSleep (1);
+        txDeleteDC(Fon);
         }
-    txDeleteDC(Fon);
     }
 
 //---------------------------------------------------------------------------------
