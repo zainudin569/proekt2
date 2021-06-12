@@ -18,7 +18,7 @@ void MoveBall();
 void DrowBall(Ball ball);
 void PhysicsBall(Ball* ball, int dt);
 void CollisionBall(Ball* ball_1, Ball* ball_2);
-void ControlBall(Ball* ball);
+void ControlBall(Ball* ball, int* F4_Col);
 
 //void bilo_stolknov (double xA, double yA, double xB, double yB, double rA, double rB)
 //double Distansce (double x1, double y1, double x2, double y2);
@@ -65,6 +65,7 @@ void MoveBall()
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
     int dt = 1;
+    int F4_Col = 1;
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
@@ -108,7 +109,7 @@ void MoveBall()
             }
         Ball_Control (&vx1, &vy1);
         */
-        ControlBall(&ball1);
+        ControlBall(&ball1, &F4_Col);
 
         txSleep (1);
         }
@@ -122,13 +123,13 @@ void DrowBall(Ball ball)
     txSetFillColor (ball .FillColor);
 
     txCircle (ball .x, ball .y, ball .r);
-    txLine (ball .x, ball .y, ball .x + ball .vx*5, ball .y + ball .vy*5);
-    txCircle (ball .x + ball .vx*5, ball .y + ball .vy*5, 3);
+    //txLine (ball .x, ball .y, ball .x + ball .vx*5, ball .y + ball .vy*5);
+    //txCircle (ball .x + ball .vx*5, ball .y + ball .vy*5, 3);
     }
 
 //---------------------------------------------------------------------------------
 
-void ControlBall(Ball* ball)
+void ControlBall(Ball* ball, int* F4_Col)
         {
         if (txGetAsyncKeyState (VK_RIGHT)) ++(*ball) .vx;
         if (txGetAsyncKeyState (VK_LEFT))  --(*ball) .vx;
@@ -142,17 +143,25 @@ void ControlBall(Ball* ball)
             (*ball) .Color = TX_LIGHTRED;
             (*ball) .FillColor = TX_RED;
             }
+
         if (txGetAsyncKeyState (VK_F2))
             {
             (*ball) .Color = TX_LIGHTBLUE;
             (*ball) .FillColor = TX_BLUE;
             }
+
         if (txGetAsyncKeyState (VK_F3))
             {
             (*ball) .Color = TX_LIGHTGREEN;
             (*ball) .FillColor = TX_GREEN;
             }
+
         if (txGetAsyncKeyState (VK_F4))
+            {
+            *F4_Col = 1
+            }
+
+        if (*F4_Col == 1)
             {
             (*ball) .Color     = RGB((*ball) .x,   (*ball) .y,   150);
             (*ball) .FillColor = RGB((*ball) .x/2, (*ball) .y/2, 150);
