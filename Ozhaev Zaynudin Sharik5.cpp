@@ -1,14 +1,13 @@
 #include "TXLib.h"
 const int W = 1100;
 const int H = 720;
+struct Ball;
 
 void MoveBall();
 void DrowBall(Ball ball);
 void PhysicsBall(Ball* ball, int dt);
 void CollisionBall(Ball* ball_1, Ball* ball_2);
 void ControlBall(Ball* ball, int* F4_Col);
-
-struct Ball;
 
 //void bilo_stolknov (double xA, double yA, double xB, double yB, double rA, double rB)
 //double Distansce (double x1, double y1, double x2, double y2);
