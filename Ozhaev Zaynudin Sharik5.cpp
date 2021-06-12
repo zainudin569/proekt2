@@ -6,7 +6,7 @@ struct Ball;
 void MoveBall();
 void DrowBall(Ball ball);
 void PhysicsBall(Ball* ball, int dt);
-void CollisionBall(Ball* ball_1, Ball* ball_2);
+void CollisionBall(Ball* ball_1, Ball* ball_2, int* score1);
 void ControlBall(Ball* ball, int* F4_Col);
 void ScoreDraw (int score1, int score2);
 
@@ -68,7 +68,7 @@ void MoveBall()
 
     int dt = 1;
     int F4_Col = 0;
-
+    int score1 = 0, score2 = 0
     HDC Fon  = txLoadImage ("images\\Fon.bmp");
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
@@ -94,14 +94,14 @@ void MoveBall()
         PhysicsBall(&ball4, dt);
 
 
-        CollisionBall(&ball1, &ball2); //проверка столкновения
-        CollisionBall(&ball1, &ball3);
-        CollisionBall(&ball1, &ball4);
+        CollisionBall(&ball1, &ball2, &score1); //проверка столкновения
+        CollisionBall(&ball1, &ball3, &score1);
+        CollisionBall(&ball1, &ball4, &score1);
 
-        CollisionBall(&ball2, &ball3);
-        CollisionBall(&ball2, &ball4);
+        CollisionBall(&ball2, &ball3, &score2);
+        CollisionBall(&ball2, &ball4, &score2);
 
-        CollisionBall(&ball3, &ball4);
+        CollisionBall(&ball3, &ball4, &score2);
 
 
 
@@ -114,7 +114,7 @@ void MoveBall()
         */
         ControlBall(&ball1, &F4_Col);
 
-        ScoreDraw (0, 0);
+        ScoreDraw (score1, score2);
 
         txEnd ();
         txSleep (1);
@@ -241,7 +241,7 @@ viod Bam_balls (int* x, int* y, int* vx, int* vy);
 
 //---------------------------------------------------------------------------------
 
-void CollisionBall (Ball* ball_1, Ball* ball_2)
+void CollisionBall (Ball* ball_1, Ball* ball_2, int* score)
 {
     int Dx = (*ball_1) .x - (*ball_2) .x; // стороны треугольника
     int Dy = (*ball_1) .y - (*ball_2) .y; // стороны треугольника
@@ -252,6 +252,8 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
     if (d < (*ball_1) .r + (*ball_2) .r) //проверка столкновения
         {
         txPlaySound ("sounds/Zvuk_Ball.wav");
+
+        ++(*score)
 
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
