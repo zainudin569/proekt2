@@ -1,6 +1,6 @@
 #include "TXLib.h"
-const int W = 1100;
-const int H = 600;
+const int W = 1000;
+const int H = 700;
 struct Ball;
 
 void MoveBall();
