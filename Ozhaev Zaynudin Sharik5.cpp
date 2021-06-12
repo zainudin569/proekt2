@@ -20,7 +20,6 @@ int main()
 
     MoveBall();
 
-    txDeleteDC(Fon);
     return 0;
     }
 
@@ -115,6 +114,7 @@ void MoveBall()
         ControlBall(&ball1, &F4_Col);
 
         txSleep (1);
+        txDeleteDC(Fon);
         }
     }
 
