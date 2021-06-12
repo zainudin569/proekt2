@@ -304,7 +304,6 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int* score)
 
 void ScoreDraw (int score1, int score2)
     {
-    txBegin ();
     txSelectFont ("TimesNewRoman", 50);
     char str[12] = "";
     sprintf (str, "%d : %d", score1, score2);
