@@ -1,13 +1,78 @@
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:6:15: error: variable or field 'DrowBall' declared void
+ void DrowBall(Ball ball);
+               ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:6:15: error: 'Ball' was not declared in this scope
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:7:18: error: variable or field 'PhysicsBall' declared void
+ void PhysicsBall(Ball* ball, int dt);
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:7:18: error: 'Ball' was not declared in this scope
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:7:24: error: 'ball' was not declared in this scope
+ void PhysicsBall(Ball* ball, int dt);
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:7:30: error: expected primary-expression before 'int'
+ void PhysicsBall(Ball* ball, int dt);
+                              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:8:20: error: variable or field 'CollisionBall' declared void
+ void CollisionBall(Ball* ball_1, Ball* ball_2);
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:8:20: error: 'Ball' was not declared in this scope
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:8:26: error: 'ball_1' was not declared in this scope
+ void CollisionBall(Ball* ball_1, Ball* ball_2);
+                          ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:8:34: error: 'Ball' was not declared in this scope
+ void CollisionBall(Ball* ball_1, Ball* ball_2);
+                                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:8:40: error: 'ball_2' was not declared in this scope
+ void CollisionBall(Ball* ball_1, Ball* ball_2);
+                                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:9:18: error: variable or field 'ControlBall' declared void
+ void ControlBall(Ball* ball, int* F4_Col);
+                  ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:9:18: error: 'Ball' was not declared in this scope
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:9:24: error: 'ball' was not declared in this scope
+ void ControlBall(Ball* ball, int* F4_Col);
+                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:9:30: error: expected primary-expression before 'int'
+ void ControlBall(Ball* ball, int* F4_Col);
+                              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void MoveBall()':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:77:23: error: 'DrowBall' was not declared in this scope
+         DrowBall(ball1);
+                       ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:85:31: error: 'PhysicsBall' was not declared in this scope
+         PhysicsBall(&ball1, dt);
+                               ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:91:37: error: 'CollisionBall' was not declared in this scope
+         CollisionBall(&ball1, &ball2);
+                                     ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:114:36: error: 'ControlBall' was not declared in this scope
+         ControlBall(&ball1, &F4_Col);
+                                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void DrowBall(Ball)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:122:6: warning: no previous declaration for 'void DrowBall(Ball)' [-Wmissing-declarations]
+ void DrowBall(Ball ball)
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void ControlBall(Ball*, int*)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:134:6: warning: no previous declaration for 'void ControlBall(Ball*, int*)' [-Wmissing-declarations]
+ void ControlBall(Ball* ball, int* F4_Col)
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void PhysicsBall(Ball*, int)':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:178:6: warning: no previous declaration for 'void PhysicsBall(Ball*, int)' [-Wmissing-declarations]
+ void PhysicsBall(Ball* ball, int dt)
+      ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void CollisionBall(Ball*, Ball*)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:240:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:238:6: warning: no previous declaration for 'void CollisionBall(Ball*, Ball*)' [-Wmissing-declarations]
+ void CollisionBall (Ball* ball_1, Ball* ball_2)
+      ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:242:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
      double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                               ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:249:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:252:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
          if ((Vn1 - Vn2) == 0) Vn1 = Vn1 + 0.01;
                             ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:263:43: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:266:43: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
          d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
                                            ^
 ---------------------------------------------------------------------------------------------
-[12.06.2021 23:48:29,90 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[13.06.2021  0:28:12,16 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

@@ -2,23 +2,13 @@
 const int W = 1100;
 const int H = 720;
 
-struct Ball
-    {
-    int  x, y , vx, vy;
-
-    int r;
-
-    COLORREF Color;
-    COLORREF FillColor;
-    };
-
-//---------------------------------------------------------------------------------
-
 void MoveBall();
 void DrowBall(Ball ball);
 void PhysicsBall(Ball* ball, int dt);
 void CollisionBall(Ball* ball_1, Ball* ball_2);
 void ControlBall(Ball* ball, int* F4_Col);
+
+struct Ball;
 
 //void bilo_stolknov (double xA, double yA, double xB, double yB, double rA, double rB)
 //double Distansce (double x1, double y1, double x2, double y2);
@@ -33,6 +23,18 @@ int main()
 
     return 0;
     }
+
+//---------------------------------------------------------------------------------
+
+struct Ball
+    {
+    int  x, y , vx, vy;
+
+    int r;
+
+    COLORREF Color;
+    COLORREF FillColor;
+    };
 
 //---------------------------------------------------------------------------------
 
@@ -243,6 +245,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
 
     if (d < (*ball_1) .r + (*ball_2) .r) //проверка столкновения
         {
+        txPlaySound ("sounds/Zvuk_Ball.mp3");
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
