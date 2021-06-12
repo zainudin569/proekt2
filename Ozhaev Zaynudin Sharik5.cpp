@@ -40,15 +40,15 @@ void MoveBall()
     {
     srand(time(NULL));
 
-    Ball ball1 = { 255,  300,
+    Ball ball1 = { rand() % W,  rand() % H,
                  1 + rand() % 9, 1 + rand() % 9,
-                 50,
+                 15 + rand() % 35,
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
-    Ball ball2 = { 255,  300,
+    Ball ball2 = { rand() % W,  rand() % H,
                  1 + rand() % 9, 1 + rand() % 9,
-                 10,
+                 15 + rand() % 35,
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200),
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
@@ -190,13 +190,13 @@ void PhysicsBall(Ball* ball, int dt)
         (*ball) .y  = H - (*ball) .r;
         }
 
-    if ((*ball) .x <  0 + (*ball) .r)
+    if ((*ball) .x  < 0 + (*ball) .r)
         {
         (*ball) .vx =   - (*ball) .vx;
         (*ball) .x  = 0 + (*ball) .r;
         }
 
-    if ((*ball) .y <   0 + (*ball) .r)
+    if ((*ball) .y  < 0 + (*ball) .r)
         {
         (*ball) .vy =   - (*ball) .vy;
         (*ball) .y  = 0 + (*ball) .r;
