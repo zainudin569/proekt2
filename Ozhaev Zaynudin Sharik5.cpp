@@ -1,6 +1,6 @@
 #include "TXLib.h"
 const int W = 1000;
-const int H = 700;
+const int H = 650;
 struct Ball;
 
 void MoveBall();
@@ -77,7 +77,7 @@ void MoveBall()
         txSetFillColor (TX_BLACK);
         txClear ();
 
-        txBitBlt  (txDC(), 0, 100, 0, 0, Fon);
+        txBitBlt  (txDC(), 0, 50, 0, 0, Fon);
 
         DrowBall(ball1);
         DrowBall(ball2);
