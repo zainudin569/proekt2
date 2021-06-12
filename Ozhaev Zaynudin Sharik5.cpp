@@ -114,8 +114,8 @@ void MoveBall()
         ControlBall(&ball1, &F4_Col);
 
         txSleep (1);
-        txDeleteDC(Fon);
         }
+    txDeleteDC(Fon);
     }
 
 //---------------------------------------------------------------------------------
