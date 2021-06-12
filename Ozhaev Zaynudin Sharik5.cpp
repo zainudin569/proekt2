@@ -19,7 +19,7 @@ int main()
     txCreateWindow (W, H);
 
     HDC Fon  = txLoadImage ("images\\Fon.bmp");
-    txBitBlt  (txDC(), 0, 0, W, H, Fon);
+    txBitBlt  (txDC(), 0, 100, 0, 0, Fon);
 
     MoveBall();
 
