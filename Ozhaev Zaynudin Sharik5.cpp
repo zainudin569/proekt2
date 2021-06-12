@@ -201,10 +201,10 @@ void PhysicsBall(Ball* ball, int dt)
         (*ball) .x  = 0 + (*ball) .r;
         }
 
-    if ((*ball) .y  < 0 + (*ball) .r)
+    if ((*ball) .y  < 50 + (*ball) .r)
         {
         (*ball) .vy =   - (*ball) .vy;
-        (*ball) .y  = 0 + (*ball) .r;
+        (*ball) .y  = 50 + (*ball) .r;
         }
     }
 
