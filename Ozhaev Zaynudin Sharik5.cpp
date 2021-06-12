@@ -276,8 +276,8 @@ void CollisionBall (Ball* ball_1, Ball* ball_2, int* score)
         d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
         sin = Dx/d; // sin
         cos = Dy/d; // cos
-        Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
-        Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
+        Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos;
+        Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos;
 
         double Vt1 = -(*ball_2) .vx*cos + (*ball_2) .vy*sin; //поворот системы координат шар1
         double Vt2 = -(*ball_1) .vx*cos + (*ball_1) .vy*sin; //поворот системы координат шар2
@@ -308,15 +308,17 @@ void ScoreDraw (int score1, int score2)
     char str[12] = "";
     sprintf (str, "%d : %d", score1, score2);
 
-    int centerX = txGetExtentX()/2;
+    //int centerX = txGetExtentX()/2;
 
-    int textSizeX = txGetTextExtentX ("------"),
-        textSizeY = txGetTextExtentY ("------");
+    //int textSizeX = txGetTextExtentX ("------"),
+        //textSizeY = txGetTextExtentY ("------");
 
-    //txSetFillColor (TX_BLACK);
-    //txRectangle (centerX - textSizeX, 0,
-                 //centerX + textSizeX, textSizeY);
-    txTextOut   (centerX - textSizeX/2, 0, str);
+    txSetFillColor (TX_BLACK);
+    txRectangle (centerX - textSizeX, 0,
+                 centerX + textSizeX, textSizeY);
+    txSetTextAlign (TA_CENTER);
+    txTextOut (txGetExtentX() / 2, 100, str);
+
 
     }
 
