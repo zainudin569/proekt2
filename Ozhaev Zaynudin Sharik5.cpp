@@ -295,6 +295,9 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
         //printf (" dt  = %f\n", dt);
         //txSleep (3000);
         }
+}
+
+//---------------------------------------------------------------------------------
 
 void ScoreDraw (int score1, int score2)
     {
@@ -315,4 +318,4 @@ void ScoreDraw (int score1, int score2)
     txEnd ();
     }
 
-}
+
