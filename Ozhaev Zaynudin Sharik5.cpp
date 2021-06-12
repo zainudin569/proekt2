@@ -8,6 +8,7 @@ void DrowBall(Ball ball);
 void PhysicsBall(Ball* ball, int dt);
 void CollisionBall(Ball* ball_1, Ball* ball_2);
 void ControlBall(Ball* ball, int* F4_Col);
+void ScoreDraw (int score1, int score2);
 
 //void bilo_stolknov (double xA, double yA, double xB, double yB, double rA, double rB)
 //double Distansce (double x1, double y1, double x2, double y2);
@@ -67,6 +68,7 @@ void MoveBall()
 
     int dt = 1;
     int F4_Col = 0;
+    int score1 = 0, score2 = 0;
 
     HDC Fon  = txLoadImage ("images\\Fon.bmp");
 
@@ -250,6 +252,8 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
         {
         txPlaySound ("sounds/Zvuk_Ball.wav");
 
+        ScoreDraw (int score1, int score2)
+
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
 
@@ -292,5 +296,24 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
         //printf (" dt  = %f\n", dt);
         //txSleep (3000);
         }
+
+void ScoreDraw (int score1, int score2)
+    {
+    txBegin ();
+    txSelectFont ("TimesNewRoman", 50);
+    char str[12] = "";
+    sprintf (str, "%d : %d", score1, score2);
+
+    int centerX = txGetExtentX()/2;
+
+    int textSizeX = txGetTextExtentX ("------"),
+        textSizeY = txGetTextExtentY ("------");
+
+    txSetFillColor (TX_BLACK);
+    txRectangle (centerX - textSizeX, 0,
+                 centerX + textSizeX, textSizeY);
+    txTextOut   (centerX - textSizeX/2, 0, str);
+    txEnd ();
+    }
 
 }

@@ -1,13 +1,35 @@
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void MoveBall()':
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:71:9: warning: unused variable 'score1' [-Wunused-variable]
+     int score1 = 0, score2 = 0;
+         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:71:21: warning: unused variable 'score2' [-Wunused-variable]
+     int score1 = 0, score2 = 0;
+                     ^
 C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp: In function 'void CollisionBall(Ball*, Ball*)':
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:245:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:247:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
      double d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01; //гипотенуза
                                               ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:256:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:255:20: error: expected primary-expression before 'int'
+         ScoreDraw (int score1, int score2)
+                    ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:255:32: error: expected primary-expression before 'int'
+         ScoreDraw (int score1, int score2)
+                                ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:257:9: error: expected ';' before 'double'
+         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
+         ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:260:14: error: 'Vn1' was not declared in this scope
          if ((Vn1 - Vn2) == 0) Vn1 = Vn1 + 0.01;
-                            ^
-C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:270:43: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+              ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:262:56: error: 'Vn1' was not declared in this scope
+         double dt = ((*ball_1) .r + (*ball_2) .r - d)/(Vn1 - Vn2); // удаление залипания
+                                                        ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:274:43: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
          d = sqrt(Dx*Dx + Dy*Dy); if (d == 0) d = 0.01;
                                            ^
+C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp:301:5: error: a function-definition is not allowed here before '{' token
+     {
+     ^
 ---------------------------------------------------------------------------------------------
-[13.06.2021  1:36:12,99 C:\Users\zainu@DESKTOP-ZAINU, returned 0]
+[13.06.2021  1:40:52,72 C:\Users\zainu@DESKTOP-ZAINU, returned 1]
 C:\Users\zainu\Desktop\курс\proekt2> g++.exe "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.cpp" -o "C:\Users\zainu\Desktop\курс\proekt2\Ozhaev Zaynudin Sharik5.exe"  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
