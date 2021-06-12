@@ -38,7 +38,7 @@ int main()
 
 void MoveBall()
     {
-    srand(time(NULL));
+    //srand(time(NULL));
 
     Ball ball1 = { rand() % W,  rand() % H,
                  1 + rand() % 9, 1 + rand() % 9,
