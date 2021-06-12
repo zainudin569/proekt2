@@ -68,13 +68,14 @@ void MoveBall()
     int dt = 1;
     int F4_Col = 0;
 
+    HDC Fon  = txLoadImage ("images\\Fon.bmp");
+
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
-        //txSetFillColor (TX_BLACK);
-        //txClear ();
+
         txBegin ();
-        HDC Fon  = txLoadImage ("images\\Fon.bmp");
         txBitBlt  (txDC(), 0, 100, 0, 0, Fon);
+
         DrowBall(ball1);
         DrowBall(ball2);
         DrowBall(ball3);
@@ -116,8 +117,8 @@ void MoveBall()
 
         txEnd ();
         txSleep (1);
-        txDeleteDC(Fon);
         }
+    txDeleteDC(Fon);
     }
 
 //---------------------------------------------------------------------------------
