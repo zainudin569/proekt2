@@ -65,7 +65,7 @@ void MoveBall()
                  RGB(50 + rand() % 200, 50 + rand() % 200, 50 + rand() % 200) };
 
     int dt = 1;
-    int F4_Col = 1;
+    int F4_Col = 0;
 
     while (!txGetAsyncKeyState (VK_ESCAPE))
         {
@@ -142,18 +142,21 @@ void ControlBall(Ball* ball, int* F4_Col)
             {
             (*ball) .Color = TX_LIGHTRED;
             (*ball) .FillColor = TX_RED;
+            *F4_Col = 0;
             }
 
         if (txGetAsyncKeyState (VK_F2))
             {
             (*ball) .Color = TX_LIGHTBLUE;
             (*ball) .FillColor = TX_BLUE;
+            *F4_Col = 0;
             }
 
         if (txGetAsyncKeyState (VK_F3))
             {
             (*ball) .Color = TX_LIGHTGREEN;
             (*ball) .FillColor = TX_GREEN;
+            *F4_Col = 0;
             }
 
         if (txGetAsyncKeyState (VK_F4))
