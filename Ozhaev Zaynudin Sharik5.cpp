@@ -18,6 +18,8 @@ int main()
     {
     txCreateWindow (W, H);
 
+    HDC fon  = txLoadImage ("images\\Fon.bmp");
+
     MoveBall();
 
     return 0;
