@@ -18,12 +18,12 @@ int main()
     {
     txCreateWindow (W, H);
 
-    HDC fon  = txLoadImage ("images\\Fon.bmp");
-    txBitBlt  (txDC(), 0, 0, 800, 600, fon, 0, 0);
+    HDC Fon  = txLoadImage ("images\\Fon.bmp");
+    txBitBlt  (txDC(), 0, 0, 800, 600, Fon, 0, 0);
 
     MoveBall();
 
-    txDeleteDC()
+    txDeleteDC(Fon)
     return 0;
     }
 
