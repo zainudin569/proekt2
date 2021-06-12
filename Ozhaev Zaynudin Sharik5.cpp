@@ -68,7 +68,6 @@ void MoveBall()
 
     int dt = 1;
     int F4_Col = 0;
-    int score1 = 0, score2 = 0;
 
     HDC Fon  = txLoadImage ("images\\Fon.bmp");
 
@@ -252,7 +251,7 @@ void CollisionBall (Ball* ball_1, Ball* ball_2)
         {
         txPlaySound ("sounds/Zvuk_Ball.wav");
 
-        ScoreDraw (int score1, int score2);
+        ScoreDraw (0, 0);
 
         double Vn1 = (*ball_2) .vx*sin + (*ball_2) .vy*cos; //поворот системы координат шар1
         double Vn2 = (*ball_1) .vx*sin + (*ball_1) .vy*cos; //поворот системы координат шар2
